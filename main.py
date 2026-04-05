@@ -1,17 +1,6 @@
-"""ShoeSnap — Scrape Running Warehouse, remove backgrounds, save web-ready WebPs."""
+"""ShoeSnap — Drag-and-drop background removal for shoe images."""
 
-import sys
-from PyQt5.QtWidgets import QApplication
-from gui import MainWindow
-
-
-def main():
-    app = QApplication(sys.argv)
-    app.setStyle("Fusion")
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec())
-
+from shoe_processor import main
 
 if __name__ == "__main__":
     main()
