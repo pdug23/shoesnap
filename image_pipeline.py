@@ -417,10 +417,7 @@ def process_pipeline(
     """
     img = load_rgba(png_bytes)
 
-    img = defringe(img)
-    img = feather_edges(img)
-    img = auto_white_balance(img)
-    img = boost_contrast(img)
+    # ── Safe geometric/structural steps ──
     img = auto_mirror(img, target=toe_direction)
     img = fit_to_canvas(img, canvas_w, canvas_h, max_w, max_h)
     img = sharpen(img)
