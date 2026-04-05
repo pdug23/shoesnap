@@ -156,27 +156,21 @@ def auto_mirror(img: Image.Image, target: str = "right") -> Image.Image:
 def feather_edges(img: Image.Image, radius: float = FEATHER_RADIUS) -> Image.Image:
     """Soften the alpha channel edges with a small Gaussian blur.
 
-    Only the *edge pixels* are affected — interior opacity stays at 100 %
-    and fully transparent areas stay at 0 %.
+    Only genuinely partial-alpha edge pixels are affected — interior
+    pixels (alpha >= 250) and fully transparent pixels stay untouched.
     """
     alpha = img.getchannel("A")
-
-    # Blur the entire alpha channel
     blurred = alpha.filter(ImageFilter.GaussianBlur(radius))
 
-    # Build a mask of "edge pixels": not fully opaque AND not fully transparent
     alpha_np = np.array(alpha)
     blurred_np = np.array(blurred)
 
-    # Keep original alpha for fully opaque interior and fully transparent exterior.
-    # Blend only at the transition zone.
-    is_edge = (alpha_np > 0) & (alpha_np < 255)
-    # Also include pixels that *became* partially transparent from the blur
-    is_edge |= (blurred_np != alpha_np)
+    # Only touch pixels that are genuinely partially transparent (the edge band).
+    # Leave the shoe interior (>= 250) and background (== 0) alone.
+    is_edge = (alpha_np > 0) & (alpha_np < 250)
 
-    result_alpha = np.where(is_edge, blurred_np, alpha_np)
-    # Ensure we never *add* opacity where there was none
-    result_alpha = np.minimum(result_alpha, alpha_np + 30).astype(np.uint8)
+    result_alpha = alpha_np.copy()
+    result_alpha[is_edge] = blurred_np[is_edge]
 
     img = img.copy()
     img.putalpha(Image.fromarray(result_alpha))
@@ -417,7 +411,7 @@ def process_pipeline(
     """
     img = load_rgba(png_bytes)
 
-    # ── Safe geometric/structural steps ──
+    img = feather_edges(img)
     img = auto_mirror(img, target=toe_direction)
     img = fit_to_canvas(img, canvas_w, canvas_h, max_w, max_h)
     img = sharpen(img)
