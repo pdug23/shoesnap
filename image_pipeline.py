@@ -33,8 +33,9 @@ def load_rgba(data: bytes) -> Image.Image:
 
 # ── Shadow cleanup ──
 
-SHADOW_ALPHA_FLOOR = 200     # pixels below this are "not the shoe body"
+SHADOW_ALPHA_FLOOR = 128     # pixels above this are "shoe body"
 SHADOW_MIN_BODY_RATIO = 0.02 # disconnected blobs smaller than 2% of the shoe → remove
+SHADOW_SURVIVAL_PCT = 0.70   # if we'd keep < 70% of visible pixels, bail out
 
 def remove_shadows(img: Image.Image) -> Image.Image:
     """Remove floor shadows, reflections, and stray semi-transparent artifacts.
@@ -47,14 +48,20 @@ def remove_shadows(img: Image.Image) -> Image.Image:
     4. Zero out all semi-transparent pixels that sit *below* the shoe body's
        bottom edge (catches floor shadows that may still be connected via a
        thin strip of partial alpha at the sole).
+    5. Safety check: if the cleanup would remove too many visible pixels,
+       return the original image untouched.
     """
     alpha = np.array(img.getchannel("A"))
+    total_visible = int((alpha > 0).sum())
+
+    if total_visible == 0:
+        return img
 
     # Step 1: binary mask of the solid shoe body
     body = alpha >= SHADOW_ALPHA_FLOOR
 
     if not body.any():
-        return img
+        return img  # no body pixels found — don't destroy the image
 
     # Step 2: label connected components
     labelled, num_features = ndimage.label(body)
@@ -76,8 +83,8 @@ def remove_shadows(img: Image.Image) -> Image.Image:
     # a kept body pixel — if not, they're floating artifacts
     semi_transparent = (alpha > 0) & (alpha < SHADOW_ALPHA_FLOOR)
 
-    # Dilate the keep mask slightly so edge pixels adjacent to the shoe survive
-    dilated_keep = ndimage.binary_dilation(keep_mask, iterations=3)
+    # Dilate the keep mask generously so edge detail adjacent to the shoe survives
+    dilated_keep = ndimage.binary_dilation(keep_mask, iterations=6)
 
     # Semi-transparent pixels connected to the shoe body survive
     connected_semi = semi_transparent & dilated_keep
@@ -87,16 +94,22 @@ def remove_shadows(img: Image.Image) -> Image.Image:
     shoe_rows = np.where(keep_mask.any(axis=1))[0]
     if len(shoe_rows) > 0:
         shoe_bottom = shoe_rows.max()
-        # Below the shoe bottom: only keep pixels that are part of the dilated body
+        # Give a small margin below the sole (some shoes have visible sole tread)
+        margin = max(5, int((shoe_rows.max() - shoe_rows.min()) * 0.03))
         below_sole = np.zeros_like(alpha, dtype=bool)
-        below_sole[shoe_bottom + 1:, :] = True
-        # Remove semi-transparent pixels below the sole
+        below_sole[shoe_bottom + margin:, :] = True
+        # Remove semi-transparent pixels well below the sole
         connected_semi[below_sole] = False
 
-    # Build final alpha: body pixels that are in kept components + connected semis
+    # Build candidate alpha
     new_alpha = np.zeros_like(alpha)
     new_alpha[keep_mask] = alpha[keep_mask]
     new_alpha[connected_semi] = alpha[connected_semi]
+
+    # Step 5: safety check — if we'd remove too many pixels, bail out
+    surviving = int((new_alpha > 0).sum())
+    if surviving < total_visible * SHADOW_SURVIVAL_PCT:
+        return img  # cleanup is too aggressive, return original
 
     img = img.copy()
     img.putalpha(Image.fromarray(new_alpha))
@@ -257,8 +270,12 @@ def auto_white_balance(img: Image.Image, clip_pct: float = WB_CLIP_PCT) -> Image
         lo = np.percentile(values, clip_pct)
         hi = np.percentile(values, 100 - clip_pct)
 
-        if hi - lo < 10:
-            # Channel already has very narrow range — skip to avoid blowout
+        if hi - lo < 30:
+            # Channel has a narrow range — stretching would blow it out
+            continue
+
+        if hi - lo > 200:
+            # Channel already spans most of 0-255 — no correction needed
             continue
 
         stretched = (channel.astype(np.float32) - lo) / (hi - lo) * 255.0
@@ -389,19 +406,17 @@ def process_pipeline(
     Returns WebP bytes ready to save.
 
     Pipeline order:
-    1. Remove shadows (floor shadows, reflections, stray artifacts)
-    2. Defringe (remove background colour halo)
-    3. Feather edges (soften alpha boundary)
-    4. Auto white-balance (normalise colour temperature)
-    5. Contrast boost (make the shoe pop)
-    6. Auto-mirror (toe pointing target direction)
-    7. Fit to canvas (scale + centre)
-    8. Sharpen (compensate for downscale softness)
-    9. Export as WebP
+    1. Defringe (remove background colour halo)
+    2. Feather edges (soften alpha boundary)
+    3. Auto white-balance (normalise colour temperature)
+    4. Contrast boost (make the shoe pop)
+    5. Auto-mirror (toe pointing target direction)
+    6. Fit to canvas (scale + centre)
+    7. Sharpen (compensate for downscale softness)
+    8. Export as WebP
     """
     img = load_rgba(png_bytes)
 
-    img = remove_shadows(img)
     img = defringe(img)
     img = feather_edges(img)
     img = auto_white_balance(img)
