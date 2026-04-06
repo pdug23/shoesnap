@@ -30,7 +30,7 @@ from PyQt5.QtWidgets import (
 FETCH_DIR = Path(__file__).parent / "fetched"
 DEFAULT_LIST = Path(__file__).parent / "shoes.txt"
 
-SEARCH_URL = "https://www.google.com/search?q={}&tbm=isch&tbs=isz:l"
+SEARCH_URL = "https://www.bing.com/images/search?q={}&qft=+filterui:imagesize-large&form=IRFLTR&first=1"
 
 HEADERS = {
     "User-Agent": (
@@ -73,25 +73,24 @@ def sanitize_filename(name: str) -> str:
 
 
 def extract_image_urls(html: str, max_results: int = 8) -> list[str]:
+    """Extract full-size image URLs from Bing Images HTML."""
+    from urllib.parse import unquote
     urls = []
-    patterns = [
-        r'"(https?://[^"]+\.(?:jpg|jpeg|png|webp)(?:\?[^"]*)?)"',
-        r'\["(https?://[^"]+\.(?:jpg|jpeg|png|webp)(?:\?[^"]*)?)"',
-    ]
     seen = set()
-    for pattern in patterns:
-        for match in re.finditer(pattern, html, re.IGNORECASE):
-            url = match.group(1)
-            if any(skip in url for skip in ["gstatic.com", "google.com", "googleapis.com"]):
-                continue
-            if any(dim in url.lower() for dim in ['=s64', '=s72', '=s96', '=s128', 'favicon']):
-                continue
-            if url in seen:
-                continue
-            seen.add(url)
-            urls.append(url)
-            if len(urls) >= max_results:
-                return urls
+
+    # Bing embeds full-size URLs as "murl":"https://..." in JSON metadata
+    for match in re.finditer(r'"murl"\s*:\s*"(https?://[^"]+)"', html):
+        url = unquote(match.group(1))
+        if url in seen:
+            continue
+        # Skip Bing's own assets
+        if "bing.com" in url or "microsoft.com" in url:
+            continue
+        seen.add(url)
+        urls.append(url)
+        if len(urls) >= max_results:
+            break
+
     return urls
 
 
