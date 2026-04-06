@@ -370,7 +370,9 @@ class FetcherWindow(QMainWindow):
 
         # Prefetch: cache of {index: candidates_list}
         self.prefetch_cache: dict[int, list] = {}
-        self.prefetch_worker = None
+        self.prefetch_workers: list[SearchWorker] = []
+        self.prefetch_in_flight: set[int] = set()  # indices currently being fetched
+        self.PREFETCH_AHEAD = 3  # how many shoes to prefetch ahead
 
         self.fetched = 0
         self.skipped = 0
@@ -380,6 +382,7 @@ class FetcherWindow(QMainWindow):
 
         self._build_ui()
         self._apply_theme()
+        self._prefetch_ahead()  # start downloading immediately
         self._advance()
 
     def _build_ui(self):
@@ -528,23 +531,39 @@ class FetcherWindow(QMainWindow):
                 return i
         return len(self.shoe_names)  # all done
 
-    def _prefetch_next(self):
-        """Start fetching the next shoe's images in the background."""
-        next_idx = self._find_next_unfetched(self.current_index + 1)
-        if next_idx >= len(self.shoe_names):
-            return
-        if next_idx in self.prefetch_cache:
-            return  # already cached
-
-        name = self.shoe_names[next_idx]
-        self.prefetch_worker = SearchWorker(name)
-        self.prefetch_worker.finished.connect(
-            lambda shoe_name, candidates: self._on_prefetch_done(next_idx, candidates)
-        )
-        self.prefetch_worker.start()
+    def _prefetch_ahead(self):
+        """Ensure the next N unfetched shoes are being downloaded or cached."""
+        idx = self.current_index + 1
+        launched = 0
+        while launched < self.PREFETCH_AHEAD and idx < len(self.shoe_names):
+            # Skip already-fetched shoes
+            filename = sanitize_filename(self.shoe_names[idx])
+            if (FETCH_DIR / f"{filename}.jpg").exists():
+                idx += 1
+                continue
+            # Skip if already cached or in-flight
+            if idx in self.prefetch_cache or idx in self.prefetch_in_flight:
+                launched += 1
+                idx += 1
+                continue
+            # Launch a worker
+            self.prefetch_in_flight.add(idx)
+            name = self.shoe_names[idx]
+            worker = SearchWorker(name)
+            prefetch_idx = idx  # capture for closure
+            worker.finished.connect(
+                lambda shoe_name, candidates, pi=prefetch_idx: self._on_prefetch_done(pi, candidates)
+            )
+            worker.start()
+            self.prefetch_workers.append(worker)
+            launched += 1
+            idx += 1
 
     def _on_prefetch_done(self, index: int, candidates: list):
         self.prefetch_cache[index] = candidates
+        self.prefetch_in_flight.discard(index)
+        # Chain: start the next prefetch as soon as this one finishes
+        self._prefetch_ahead()
 
     def _show_shoe(self, index: int):
         """Display a shoe at the given index — either from cache or by fetching."""
@@ -604,7 +623,7 @@ class FetcherWindow(QMainWindow):
             self.skip_btn.setEnabled(True)
             self.back_btn.setEnabled(self.current_index > 0)
             # Still prefetch next
-            self._prefetch_next()
+            self._prefetch_ahead()
             return
 
         self.status_label.setText(f"Click an image to save it  |  Sorted best → worst")
@@ -625,7 +644,7 @@ class FetcherWindow(QMainWindow):
         self.back_btn.setEnabled(self.current_index > 0)
 
         # Start prefetching the next shoe
-        self._prefetch_next()
+        self._prefetch_ahead()
 
     def _on_card_clicked(self, index: int):
         """Single click = select and save immediately."""
@@ -682,6 +701,8 @@ class FetcherWindow(QMainWindow):
         """Restart from the beginning (doesn't delete already-fetched files)."""
         self.current_index = -1
         self.prefetch_cache.clear()
+        self.prefetch_in_flight.clear()
+        self._prefetch_ahead()
         self._advance()
 
     def _show_complete(self):
