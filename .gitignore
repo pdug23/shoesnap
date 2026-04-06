@@ -14,6 +14,8 @@ env/
 # Output and downloaded files
 output/
 fetched/
+logos/
+logos_raw/
 downloaded_files/
 
 # IDE

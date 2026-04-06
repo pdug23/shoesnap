@@ -1,0 +1,23 @@
+# ShoeSnap Logo Fetcher — brand list
+# One brand per line. Lines starting with # are ignored.
+
+adidas
+Altra
+ASICS
+Brooks
+Dynafish
+HOKA
+Inov-8
+Li-Ning
+Mizuno
+New Balance
+Nike
+On
+PUMA
+R.A.D
+Salomon
+Saucony
+Skechers
+The North Face
+Topo Athletic
+Under Armour
