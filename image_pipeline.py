@@ -190,14 +190,14 @@ def defringe(img: Image.Image, radius: int = DEFRINGE_RADIUS) -> Image.Image:
     arr = np.array(img, dtype=np.float32)  # H, W, 4
     alpha = arr[:, :, 3]
 
-    # Edge pixels: partially transparent (1-254)
-    edge_mask = (alpha > 0) & (alpha < 255)
+    # Edge pixels: genuinely partially transparent (1-249)
+    edge_mask = (alpha > 0) & (alpha < 250)
 
     if not edge_mask.any():
         return img
 
-    # Interior pixels: fully opaque
-    interior_mask = alpha == 255
+    # Interior pixels: the shoe body
+    interior_mask = alpha >= 250
 
     # For each edge pixel, average the RGB of interior pixels within `radius`.
     # We do this efficiently with a box blur of the interior colours.
@@ -411,7 +411,10 @@ def process_pipeline(
     """
     img = load_rgba(png_bytes)
 
+    img = defringe(img)
     img = feather_edges(img)
+    img = auto_white_balance(img)
+    img = boost_contrast(img)
     img = auto_mirror(img, target=toe_direction)
     img = fit_to_canvas(img, canvas_w, canvas_h, max_w, max_h)
     img = sharpen(img)
