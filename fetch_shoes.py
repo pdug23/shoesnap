@@ -364,10 +364,13 @@ class FetcherWindow(QMainWindow):
 
         self.shoe_names = shoe_names
         self.current_index = -1
-        self.candidates = []  # list of (bytes, w, h, source)
+        self.candidates = []
         self.cards: list[ImageCard] = []
-        self.selected_card = -1
         self.worker = None
+
+        # Prefetch: cache of {index: candidates_list}
+        self.prefetch_cache: dict[int, list] = {}
+        self.prefetch_worker = None
 
         self.fetched = 0
         self.skipped = 0
@@ -428,22 +431,28 @@ class FetcherWindow(QMainWindow):
         btn_row = QHBoxLayout()
         btn_row.setSpacing(10)
 
+        self.restart_btn = QPushButton("Restart")
+        self.restart_btn.setFont(QFont(FONT_UI, 11))
+        self.restart_btn.setMinimumHeight(40)
+        self.restart_btn.setMinimumWidth(90)
+        self.restart_btn.clicked.connect(self._restart)
+        btn_row.addWidget(self.restart_btn)
+
+        self.back_btn = QPushButton("Back")
+        self.back_btn.setFont(QFont(FONT_UI, 11))
+        self.back_btn.setMinimumHeight(40)
+        self.back_btn.setMinimumWidth(80)
+        self.back_btn.clicked.connect(self._go_back)
+        btn_row.addWidget(self.back_btn)
+
         self.skip_btn = QPushButton("Skip")
         self.skip_btn.setFont(QFont(FONT_UI, 11))
         self.skip_btn.setMinimumHeight(40)
-        self.skip_btn.setMinimumWidth(100)
+        self.skip_btn.setMinimumWidth(80)
         self.skip_btn.clicked.connect(self._skip)
         btn_row.addWidget(self.skip_btn)
 
         btn_row.addStretch()
-
-        self.use_btn = QPushButton("Use This Image")
-        self.use_btn.setFont(QFont(FONT_UI, 12, QFont.Bold))
-        self.use_btn.setMinimumHeight(40)
-        self.use_btn.setMinimumWidth(180)
-        self.use_btn.setEnabled(False)
-        self.use_btn.clicked.connect(self._use_selected)
-        btn_row.addWidget(self.use_btn)
 
         layout.addLayout(btn_row)
 
@@ -479,11 +488,11 @@ class FetcherWindow(QMainWindow):
                 background-color: {BG_LIGHTER};
                 color: {TEXT_DIM};
             }}
-            QPushButton#skipBtn {{
+            QPushButton#skipBtn, QPushButton#backBtn, QPushButton#restartBtn {{
                 background-color: {BG_LIGHTER};
                 color: {TEXT};
             }}
-            QPushButton#skipBtn:hover {{
+            QPushButton#skipBtn:hover, QPushButton#backBtn:hover, QPushButton#restartBtn:hover {{
                 background-color: #4a4a4a;
             }}
             QProgressBar {{
@@ -497,19 +506,49 @@ class FetcherWindow(QMainWindow):
             }}
         """)
         self.skip_btn.setObjectName("skipBtn")
+        self.back_btn.setObjectName("backBtn")
+        self.restart_btn.setObjectName("restartBtn")
         self.skip_btn.setStyle(self.skip_btn.style())
+        self.back_btn.setStyle(self.back_btn.style())
+        self.restart_btn.setStyle(self.restart_btn.style())
 
     def _clear_grid(self):
         self.cards.clear()
-        self.selected_card = -1
         while self.grid_layout.count():
             item = self.grid_layout.takeAt(0)
             if item.widget():
                 item.widget().deleteLater()
         self.grid_layout.addStretch()
 
-    def _advance(self):
-        self.current_index += 1
+    def _find_next_unfetched(self, start: int) -> int:
+        """Find the next index >= start that hasn't been fetched yet."""
+        for i in range(start, len(self.shoe_names)):
+            filename = sanitize_filename(self.shoe_names[i])
+            if not (FETCH_DIR / f"{filename}.jpg").exists():
+                return i
+        return len(self.shoe_names)  # all done
+
+    def _prefetch_next(self):
+        """Start fetching the next shoe's images in the background."""
+        next_idx = self._find_next_unfetched(self.current_index + 1)
+        if next_idx >= len(self.shoe_names):
+            return
+        if next_idx in self.prefetch_cache:
+            return  # already cached
+
+        name = self.shoe_names[next_idx]
+        self.prefetch_worker = SearchWorker(name)
+        self.prefetch_worker.finished.connect(
+            lambda shoe_name, candidates: self._on_prefetch_done(next_idx, candidates)
+        )
+        self.prefetch_worker.start()
+
+    def _on_prefetch_done(self, index: int, candidates: list):
+        self.prefetch_cache[index] = candidates
+
+    def _show_shoe(self, index: int):
+        """Display a shoe at the given index — either from cache or by fetching."""
+        self.current_index = index
         self.progress_bar.setValue(self.current_index)
 
         if self.current_index >= len(self.shoe_names):
@@ -523,22 +562,34 @@ class FetcherWindow(QMainWindow):
         # Skip if already fetched
         if out_path.exists():
             self.skipped += 1
-            self._advance()
+            self._show_shoe(self.current_index + 1)
             return
 
         self.shoe_label.setText(name)
         self.counter_label.setText(f"{self.current_index + 1} / {len(self.shoe_names)}")
+        self.skip_btn.setEnabled(False)
+        self.back_btn.setEnabled(self.current_index > 0)
+        self._clear_grid()
+
+        # Check prefetch cache first
+        if self.current_index in self.prefetch_cache:
+            self.status_label.setText("Loading from cache...")
+            self.status_label.setStyleSheet(f"color: {ORANGE};")
+            cached = self.prefetch_cache.pop(self.current_index)
+            self._on_search_done(name, cached)
+            return
+
         self.status_label.setText("Searching...")
         self.status_label.setStyleSheet(f"color: {ORANGE};")
-        self.use_btn.setEnabled(False)
-        self.skip_btn.setEnabled(False)
-        self._clear_grid()
 
         # Start search
         self.worker = SearchWorker(name)
         self.worker.progress.connect(self._on_search_progress)
         self.worker.finished.connect(self._on_search_done)
         self.worker.start()
+
+    def _advance(self):
+        self._show_shoe(self.current_index + 1)
 
     def _on_search_progress(self, msg: str):
         self.status_label.setText(msg)
@@ -551,9 +602,12 @@ class FetcherWindow(QMainWindow):
             self.status_label.setText("No images found")
             self.status_label.setStyleSheet(f"color: {RED};")
             self.skip_btn.setEnabled(True)
+            self.back_btn.setEnabled(self.current_index > 0)
+            # Still prefetch next
+            self._prefetch_next()
             return
 
-        self.status_label.setText(f"Sorted by quality — click an image to select it")
+        self.status_label.setText(f"Click an image to save it  |  Sorted best → worst")
         self.status_label.setStyleSheet(f"color: {TEXT_DIM};")
 
         # Remove the trailing stretch before adding cards
@@ -568,18 +622,22 @@ class FetcherWindow(QMainWindow):
 
         self.grid_layout.addStretch()
         self.skip_btn.setEnabled(True)
+        self.back_btn.setEnabled(self.current_index > 0)
+
+        # Start prefetching the next shoe
+        self._prefetch_next()
 
     def _on_card_clicked(self, index: int):
-        self.selected_card = index
-        for i, card in enumerate(self.cards):
-            card.set_selected(i == index)
-        self.use_btn.setEnabled(True)
-
-    def _use_selected(self):
-        if self.selected_card < 0 or self.selected_card >= len(self.candidates):
+        """Single click = select and save immediately."""
+        if index < 0 or index >= len(self.candidates):
             return
 
-        data = self.candidates[self.selected_card][0]
+        # Visual feedback
+        for i, card in enumerate(self.cards):
+            card.set_selected(i == index)
+
+        # Save immediately
+        data = self.candidates[index][0]
         name = self.shoe_names[self.current_index]
         filename = sanitize_filename(name)
         out_path = FETCH_DIR / f"{filename}.jpg"
@@ -589,12 +647,41 @@ class FetcherWindow(QMainWindow):
         self.status_label.setStyleSheet(f"color: {GREEN};")
         self.fetched += 1
 
-        # Brief pause so user sees the "Saved" message
+        # Disable cards so you can't double-click
+        for card in self.cards:
+            card.setEnabled(False)
+        self.skip_btn.setEnabled(False)
+
+        # Brief pause so user sees the green "Saved" feedback, then advance
         from PyQt5.QtCore import QTimer
-        QTimer.singleShot(300, self._advance)
+        QTimer.singleShot(400, self._advance)
 
     def _skip(self):
         self.failed += 1
+        self._advance()
+
+    def _go_back(self):
+        """Go back to the previous shoe (re-fetches it, deletes its saved file)."""
+        if self.current_index <= 0:
+            return
+
+        # Delete the previously saved file so user can re-pick
+        prev_idx = self.current_index - 1
+        # Walk backwards to find the last shoe we actually showed (not auto-skipped)
+        while prev_idx >= 0:
+            filename = sanitize_filename(self.shoe_names[prev_idx])
+            out_path = FETCH_DIR / f"{filename}.jpg"
+            if out_path.exists():
+                out_path.unlink()
+                self.fetched = max(0, self.fetched - 1)
+            break
+
+        self._show_shoe(prev_idx)
+
+    def _restart(self):
+        """Restart from the beginning (doesn't delete already-fetched files)."""
+        self.current_index = -1
+        self.prefetch_cache.clear()
         self._advance()
 
     def _show_complete(self):
@@ -602,14 +689,15 @@ class FetcherWindow(QMainWindow):
         self.shoe_label.setText("All done!")
         self.counter_label.setText("")
         self.status_label.setText(
-            f"Fetched: {self.fetched}  |  Skipped (already had): {self.skipped}  |  Skipped: {self.failed}"
+            f"Fetched: {self.fetched}  |  Already had: {self.skipped}  |  Skipped: {self.failed}"
         )
         self.status_label.setStyleSheet(f"color: {GREEN};")
-        self.use_btn.setVisible(False)
         self.skip_btn.setText("Close")
         self.skip_btn.setEnabled(True)
         self.skip_btn.clicked.disconnect()
         self.skip_btn.clicked.connect(self.close)
+        self.back_btn.setEnabled(False)
+        self.restart_btn.setEnabled(True)
         self.progress_bar.setValue(len(self.shoe_names))
 
 
