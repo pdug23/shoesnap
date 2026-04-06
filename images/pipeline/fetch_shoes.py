@@ -27,8 +27,11 @@ from PyQt5.QtWidgets import (
     QSizePolicy, QMessageBox,
 )
 
-FETCH_DIR = Path(__file__).parent / "fetched"
-DEFAULT_LIST = Path(__file__).parent / "shoes.txt"
+_PIPELINE_DIR = Path(__file__).resolve().parent       # images/pipeline/
+_IMAGES_DIR = _PIPELINE_DIR.parent                    # images/
+_REPO_DIR = _IMAGES_DIR.parent                        # repo root
+FETCH_DIR = _REPO_DIR / "fetched"
+DEFAULT_LIST = _IMAGES_DIR / "shoes.txt"
 
 SEARCH_URL = "https://www.bing.com/images/search?q={}&qft=+filterui:imagesize-large&form=IRFLTR&first=1"
 

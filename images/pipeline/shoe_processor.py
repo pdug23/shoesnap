@@ -47,8 +47,10 @@ else:
 from image_pipeline import process_pipeline
 
 
-APP_DIR = Path(__file__).parent
-OUTPUT_DIR = APP_DIR / "output"
+APP_DIR = Path(__file__).resolve().parent           # images/pipeline/
+IMAGES_DIR = APP_DIR.parent                          # images/
+REPO_DIR = IMAGES_DIR.parent                         # repo root
+OUTPUT_DIR = IMAGES_DIR / "processed"
 LOG_FILE = OUTPUT_DIR / "processing_log.json"
 IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".bmp", ".webp", ".tiff", ".tif", ".avif"}
 OUTPUT_EXT = ".webp"

@@ -21,8 +21,10 @@ from logo_pipeline import (
     is_svg, process_logo_svg,
 )
 
-LOGOS_RAW = Path(__file__).parent / "logos_raw"
-LOGOS_OUT = Path(__file__).parent / "logos"
+_PIPELINE_DIR = Path(__file__).resolve().parent       # logos/pipeline/
+_LOGOS_DIR = _PIPELINE_DIR.parent                     # logos/
+LOGOS_RAW = _LOGOS_DIR / "raw"
+LOGOS_OUT = _LOGOS_DIR / "processed"
 
 
 def bitmap_to_mask(data: bytes) -> np.ndarray:

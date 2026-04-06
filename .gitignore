@@ -11,12 +11,21 @@ build/
 venv/
 env/
 
-# Output and downloaded files
-output/
+# Image pipeline output
+images/downloaded/
+images/processed/
 fetched/
-logos/
-logos_raw/
-downloaded_files/
+
+# Logo pipeline output
+logos/raw/
+logos/processed/
+
+# Scoring output
+scoring/output/
+scoring/scored/
+
+# Database (tracked separately — only shoebase.json is committed)
+# database/ is tracked
 
 # IDE
 .vscode/
@@ -29,3 +38,8 @@ Desktop.ini
 
 # Claude Code
 .claude/
+
+# Legacy directories
+output/
+downloaded_files/
+logos_raw/

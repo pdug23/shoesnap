@@ -28,9 +28,12 @@ from PyQt5.QtWidgets import (
 
 from logo_pipeline import process_logo, process_logo_svg, is_svg
 
-LOGOS_RAW_DIR = Path(__file__).parent / "logos_raw"
-LOGOS_DIR = Path(__file__).parent / "logos"
-DEFAULT_LIST = Path(__file__).parent / "brands.txt"
+_PIPELINE_DIR = Path(__file__).resolve().parent       # logos/pipeline/
+_LOGOS_DIR = _PIPELINE_DIR.parent                     # logos/
+_REPO_DIR = _LOGOS_DIR.parent                         # repo root
+LOGOS_RAW_DIR = _LOGOS_DIR / "raw"
+LOGOS_DIR = _LOGOS_DIR / "processed"
+DEFAULT_LIST = _REPO_DIR / "brands.txt"
 
 SEARCH_URL = "https://www.bing.com/images/search?q={}&qft=+filterui:imagesize-large+filterui:photo-transparent&form=IRFLTR&first=1"
 

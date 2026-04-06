@@ -1,0 +1,47 @@
+{
+  "version": "1.1",
+  "anchors": {
+    "cushion_softness": {
+      "1": { "shoe": "Saucony Kinvara 16", "why": "27.5 HA, 28mm stack", "ha": 27.5, "stack_heel_mm": 28 },
+      "2": { "shoe": "On Cloudrunner 2", "why": "48.6 AC, 33.6mm", "ac": 48.6, "stack_heel_mm": 33.6 },
+      "3": { "shoe": "Nike Pegasus 41", "why": "Average everything", "ac": 37.1, "stack_heel_mm": 33.5 },
+      "4": { "shoe": "ASICS Novablast 5", "why": "Soft FF Blast Max, 37mm", "stack_heel_mm": 37 },
+      "5": { "shoe": "NB 1080 v13", "why": "10.0 HA, softest ever", "ha": 10.0, "stack_heel_mm": 38 }
+    },
+    "bounce": {
+      "1": { "shoe": "On Cloudflow 5", "why": "46.9% return", "energy_return_pct": 46.9 },
+      "2": { "shoe": "Brooks Glycerin 22", "why": "~55% return, no plate", "energy_return_pct": 55 },
+      "3": { "shoe": "ASICS Novablast 5", "why": "66% but no plate", "energy_return_pct": 66 },
+      "4": { "shoe": "Saucony Endorphin Speed 4", "why": "74.5% + nylon plate", "energy_return_pct": 74.5 },
+      "5": { "shoe": "adidas EVO SL", "why": "78.5% without plate", "energy_return_pct": 78.5 }
+    },
+    "stability": {
+      "1": { "shoe": "adidas Takumi Sen 11", "why": "72.6mm heel", "heel_width_mm": 72.6 },
+      "2": { "shoe": "Nike Pegasus Premium", "why": "Soft foam, narrow heel" },
+      "3": { "shoe": "Nike Pegasus 41", "why": "Average everything", "heel_width_mm": 91.3 },
+      "4": { "shoe": "HOKA Bondi 9", "why": "Wide platforms", "heel_width_mm": 96 },
+      "5": { "shoe": "ASICS Gel Kayano 32", "why": "Full stability tech" }
+    },
+    "rocker": {
+      "1": { "shoe": "Brooks Ghost Max 3", "why": "Completely flat" },
+      "2": { "shoe": "HOKA Bondi 9", "why": "Mild meta-rocker" },
+      "3": { "shoe": "On Cloudmonster 2", "why": "Moderate, rolling" },
+      "4": { "shoe": "Nike Vomero Premium", "why": "Aggressive forefoot, tall stack" },
+      "5": { "shoe": "Mizuno Wave Rebellion Flash 3", "why": "~5cm toe spring, extreme" }
+    },
+    "ground_feel": {
+      "1": { "shoe": "HOKA Bondi 9", "why": "39mm+ stack", "stack_heel_mm": 39 },
+      "2": { "shoe": "ASICS Superblast 2", "why": "36/30mm", "stack_forefoot_mm": 30 },
+      "3": { "shoe": "Saucony Ride 18", "why": "33/25mm", "stack_forefoot_mm": 25 },
+      "4": { "shoe": "Nike Pegasus 41", "why": "32/24mm", "stack_forefoot_mm": 24 },
+      "5": { "shoe": "Saucony Kinvara 16", "why": "28/23.5mm", "stack_forefoot_mm": 23.5 }
+    },
+    "weight_feel": {
+      "1": { "shoe": "Nike Streakfly 2", "why": "128g", "weight_g": 128 },
+      "2": { "shoe": "adidas EVO SL", "why": "223g", "weight_g": 223 },
+      "3": { "shoe": "Saucony Ride 18", "why": "255g", "weight_g": 255 },
+      "4": { "shoe": "Nike Pegasus 41", "why": "281g", "weight_g": 281 },
+      "5": { "shoe": "Nike Vomero Premium", "why": "326g", "weight_g": 326 }
+    }
+  }
+}
