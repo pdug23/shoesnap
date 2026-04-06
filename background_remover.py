@@ -8,7 +8,7 @@ from image_pipeline import process_pipeline
 
 
 class BackgroundRemover:
-    def __init__(self, model_name="u2net"):
+    def __init__(self, model_name="birefnet-general"):
         self.model_name = model_name
         self._session = None
         self._remove_fn = None
@@ -39,7 +39,14 @@ class BackgroundRemover:
     def remove_background(self, image_data: bytes) -> bytes:
         """Remove background from image bytes, return raw transparent PNG bytes."""
         self._ensure_loaded()
-        return self._remove_fn(image_data, session=self._get_session())
+        return self._remove_fn(
+            image_data,
+            session=self._get_session(),
+            alpha_matting=True,
+            alpha_matting_foreground_threshold=230,
+            alpha_matting_background_threshold=20,
+            alpha_matting_erode_size=10,
+        )
 
     def process_and_save(self, image_data: bytes, output_path: Path) -> Path:
         """Remove background, run post-processing pipeline, and save.

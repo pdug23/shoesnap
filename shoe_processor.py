@@ -104,16 +104,18 @@ def unique_name(name: str, output_dir: Path) -> str:
 # ── Background Removal Worker ──
 
 _rembg_remove = None
+_rembg_session = None
 
 
 def _get_rembg_remove():
-    """Lazy-load rembg.remove once, on first use. Called from main thread."""
-    global _rembg_remove
+    """Lazy-load rembg.remove and BiRefNet session once, on first use."""
+    global _rembg_remove, _rembg_session
     if _rembg_remove is None:
         import traceback as _tb
         try:
-            from rembg import remove
+            from rembg import remove, new_session
             _rembg_remove = remove
+            _rembg_session = new_session("birefnet-general")
         except Exception:
             _tb.print_exc()
             raise
@@ -132,7 +134,14 @@ class RemoveBgWorker(QThread):
     def run(self):
         import traceback as _tb
         try:
-            result = self.remove_fn(self.image_bytes)
+            result = self.remove_fn(
+                self.image_bytes,
+                session=_rembg_session,
+                alpha_matting=True,
+                alpha_matting_foreground_threshold=230,
+                alpha_matting_background_threshold=20,
+                alpha_matting_erode_size=10,
+            )
             self.finished.emit(result)
         except Exception as e:
             _tb.print_exc()
