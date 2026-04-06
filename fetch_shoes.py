@@ -1,33 +1,35 @@
-"""ShoeSnap Image Fetcher — Bulk download shoe images from Google Images.
+"""ShoeSnap Image Fetcher — GUI tool for bulk downloading shoe images.
 
 Usage:
     1. Put shoe names in shoes.txt (one per line)
     2. Run: python fetch_shoes.py
-    3. For each shoe, pick the best image from 5 options
+    3. For each shoe, pick the best image from the visual preview
     4. Images are saved to fetched/ with clean filenames
     5. Drag the fetched/ folder into ShoeSnap to process
-
-Options:
-    python fetch_shoes.py                  # uses shoes.txt
-    python fetch_shoes.py my_list.txt      # uses custom file
-    python fetch_shoes.py --auto           # auto-pick first result (no prompts)
 """
 
 import re
 import sys
-import json
 import time
 import random
+from io import BytesIO
 from pathlib import Path
 from urllib.parse import quote_plus
 
 import requests
+from PIL import Image
+
+from PyQt5.QtCore import Qt, QThread, pyqtSignal, QSize
+from PyQt5.QtGui import QPixmap, QImage, QFont, QPalette, QColor
+from PyQt5.QtWidgets import (
+    QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
+    QLabel, QPushButton, QProgressBar, QScrollArea, QFrame,
+    QSizePolicy, QMessageBox,
+)
 
 FETCH_DIR = Path(__file__).parent / "fetched"
 DEFAULT_LIST = Path(__file__).parent / "shoes.txt"
 
-# Google Images returns results embedded in HTML — we extract image URLs
-# from the page source. This avoids needing an API key.
 SEARCH_URL = "https://www.google.com/search?q={}&tbm=isch&tbs=isz:l"
 
 HEADERS = {
@@ -40,9 +42,27 @@ HEADERS = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 
+# Platform fonts
+if sys.platform == "darwin":
+    FONT_UI = "SF Pro Text"
+    FONT_MONO = "Menlo"
+else:
+    FONT_UI = "Segoe UI"
+    FONT_MONO = "Consolas"
+
+# Theme
+BG = "#1e1e1e"
+BG_LIGHT = "#2d2d2d"
+BG_LIGHTER = "#3a3a3a"
+TEXT = "#e0e0e0"
+TEXT_DIM = "#888888"
+ACCENT = "#3b82f6"
+GREEN = "#22c55e"
+RED = "#ef4444"
+ORANGE = "#f59e0b"
+
 
 def sanitize_filename(name: str) -> str:
-    """Turn a shoe name into a clean filename."""
     name = name.lower().strip()
     name = re.sub(r'[®™©]', '', name)
     name = re.sub(r'[\s_\.]+', '-', name)
@@ -53,151 +73,411 @@ def sanitize_filename(name: str) -> str:
 
 
 def extract_image_urls(html: str, max_results: int = 8) -> list[str]:
-    """Extract image URLs from Google Images HTML source."""
     urls = []
-
-    # Pattern 1: full-size image URLs in metadata
-    # Google embeds them as escaped strings in various JSON-like structures
     patterns = [
         r'"(https?://[^"]+\.(?:jpg|jpeg|png|webp)(?:\?[^"]*)?)"',
         r'\["(https?://[^"]+\.(?:jpg|jpeg|png|webp)(?:\?[^"]*)?)"',
     ]
-
     seen = set()
     for pattern in patterns:
         for match in re.finditer(pattern, html, re.IGNORECASE):
             url = match.group(1)
-            # Filter out Google's own thumbnails and icons
-            if "gstatic.com" in url:
+            if any(skip in url for skip in ["gstatic.com", "google.com", "googleapis.com"]):
                 continue
-            if "google.com" in url:
-                continue
-            if "googleapis.com" in url:
+            if any(dim in url.lower() for dim in ['=s64', '=s72', '=s96', '=s128', 'favicon']):
                 continue
             if url in seen:
-                continue
-            # Skip tiny images (likely thumbnails)
-            if any(dim in url.lower() for dim in ['=s64', '=s72', '=s96', '=s128', 'favicon']):
                 continue
             seen.add(url)
             urls.append(url)
             if len(urls) >= max_results:
                 return urls
-
     return urls
 
 
-def search_shoe_images(shoe_name: str) -> list[str]:
-    """Search Google Images for a shoe and return image URLs."""
-    query = f"{shoe_name} running shoe side view"
-    url = SEARCH_URL.format(quote_plus(query))
-
-    try:
-        resp = requests.get(url, headers=HEADERS, timeout=15)
-        resp.raise_for_status()
-        return extract_image_urls(resp.text)
-    except Exception as e:
-        print(f"  Search failed: {e}")
-        return []
-
-
 def download_image(url: str, timeout: int = 15) -> bytes | None:
-    """Download an image URL and return bytes, or None on failure."""
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=timeout, stream=True)
+        resp = requests.get(url, headers=HEADERS, timeout=timeout)
         resp.raise_for_status()
-
-        # Check content type
         content_type = resp.headers.get("Content-Type", "")
         if "image" not in content_type and "octet-stream" not in content_type:
             return None
-
-        # Read up to 15MB
         data = resp.content
-        if len(data) < 5000:  # too small, probably an error page
+        if len(data) < 5000:
             return None
         return data
     except Exception:
         return None
 
 
-def pick_image_interactive(shoe_name: str, urls: list[str]) -> bytes | None:
-    """Let the user pick from available images by downloading and showing sizes."""
-    if not urls:
-        print(f"  No images found for '{shoe_name}'")
-        return None
+# ── Search worker (runs in background thread) ──
 
-    print(f"\n  Found {len(urls)} images for '{shoe_name}':")
+class SearchWorker(QThread):
+    """Search for a shoe and download candidate images."""
+    finished = pyqtSignal(str, list)  # shoe_name, list of (bytes, width, height, source)
+    progress = pyqtSignal(str)
 
-    # Download all candidates and show info
-    candidates = []
-    for i, url in enumerate(urls[:6]):
-        data = download_image(url)
-        if data:
-            size_kb = len(data) / 1024
-            # Try to get dimensions
-            try:
-                from PIL import Image
-                from io import BytesIO
-                img = Image.open(BytesIO(data))
-                w, h = img.size
-                dim_str = f"{w}x{h}"
-            except Exception:
-                dim_str = "unknown"
+    def __init__(self, shoe_name: str):
+        super().__init__()
+        self.shoe_name = shoe_name
 
-            candidates.append(data)
-            domain = re.search(r'https?://([^/]+)', url)
-            source = domain.group(1) if domain else "unknown"
-            print(f"    [{len(candidates)}] {dim_str}  {size_kb:.0f}KB  ({source})")
-        else:
-            # Don't show failed downloads
-            pass
+    def run(self):
+        self.progress.emit(f"Searching for {self.shoe_name}...")
+        query = f"{self.shoe_name} running shoe side view"
+        url = SEARCH_URL.format(quote_plus(query))
 
-    if not candidates:
-        print(f"  All downloads failed for '{shoe_name}'")
-        return None
-
-    # Let user pick
-    while True:
-        choice = input(f"  Pick 1-{len(candidates)} (or 's' to skip): ").strip().lower()
-        if choice == 's':
-            return None
         try:
-            idx = int(choice) - 1
-            if 0 <= idx < len(candidates):
-                return candidates[idx]
-        except ValueError:
-            pass
-        print(f"  Enter a number 1-{len(candidates)} or 's' to skip")
+            resp = requests.get(url, headers=HEADERS, timeout=15)
+            resp.raise_for_status()
+            urls = extract_image_urls(resp.text)
+        except Exception as e:
+            self.progress.emit(f"Search failed: {e}")
+            self.finished.emit(self.shoe_name, [])
+            return
+
+        candidates = []
+        for i, img_url in enumerate(urls[:6]):
+            self.progress.emit(f"Downloading image {i + 1}/{min(len(urls), 6)}...")
+            data = download_image(img_url)
+            if data:
+                try:
+                    img = Image.open(BytesIO(data))
+                    w, h = img.size
+                except Exception:
+                    w, h = 0, 0
+                domain = re.search(r'https?://([^/]+)', img_url)
+                source = domain.group(1) if domain else "unknown"
+                candidates.append((data, w, h, source))
+
+        self.finished.emit(self.shoe_name, candidates)
 
 
-def pick_image_auto(shoe_name: str, urls: list[str]) -> bytes | None:
-    """Auto-pick the largest image (likely highest quality)."""
-    if not urls:
-        print(f"  No images found for '{shoe_name}'")
-        return None
+# ── Image candidate card ──
 
-    best_data = None
-    best_size = 0
+class ImageCard(QFrame):
+    """Clickable image preview card."""
+    clicked = pyqtSignal(int)
 
-    for url in urls[:5]:
-        data = download_image(url)
-        if data and len(data) > best_size:
-            best_data = data
-            best_size = len(data)
+    def __init__(self, index: int, data: bytes, width: int, height: int, source: str):
+        super().__init__()
+        self.index = index
+        self.data = data
+        self.setCursor(Qt.PointingHandCursor)
+        self.setFrameStyle(QFrame.Box)
+        self.setLineWidth(2)
+        self._selected = False
+        self._update_style()
 
-    if best_data:
-        print(f"  Auto-picked {best_size / 1024:.0f}KB image")
-    else:
-        print(f"  All downloads failed")
+        layout = QVBoxLayout(self)
+        layout.setContentsMargins(6, 6, 6, 6)
+        layout.setSpacing(4)
 
-    return best_data
+        # Image preview
+        self.image_label = QLabel()
+        self.image_label.setFixedSize(220, 160)
+        self.image_label.setAlignment(Qt.AlignCenter)
+        self.image_label.setStyleSheet(f"background-color: #ffffff; border: 1px solid {BG_LIGHTER};")
+
+        qimg = QImage.fromData(data)
+        if not qimg.isNull():
+            pixmap = QPixmap.fromImage(qimg)
+            scaled = pixmap.scaled(220, 160, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+            self.image_label.setPixmap(scaled)
+        else:
+            self.image_label.setText("Failed")
+
+        layout.addWidget(self.image_label, alignment=Qt.AlignCenter)
+
+        # Info
+        size_kb = len(data) / 1024
+        info = QLabel(f"{width}x{height}  |  {size_kb:.0f}KB")
+        info.setAlignment(Qt.AlignCenter)
+        info.setFont(QFont(FONT_MONO, 9))
+        info.setStyleSheet(f"color: {TEXT_DIM}; border: none;")
+        layout.addWidget(info)
+
+        source_label = QLabel(source)
+        source_label.setAlignment(Qt.AlignCenter)
+        source_label.setFont(QFont(FONT_UI, 8))
+        source_label.setStyleSheet(f"color: {TEXT_DIM}; border: none;")
+        layout.addWidget(source_label)
+
+    def _update_style(self):
+        if self._selected:
+            self.setStyleSheet(f"ImageCard {{ border: 2px solid {GREEN}; background-color: {BG_LIGHT}; border-radius: 8px; }}")
+        else:
+            self.setStyleSheet(f"ImageCard {{ border: 2px solid {BG_LIGHTER}; background-color: {BG_LIGHT}; border-radius: 8px; }}")
+
+    def set_selected(self, selected: bool):
+        self._selected = selected
+        self._update_style()
+
+    def mousePressEvent(self, event):
+        self.clicked.emit(self.index)
+
+
+# ── Main window ──
+
+class FetcherWindow(QMainWindow):
+    def __init__(self, shoe_names: list[str]):
+        super().__init__()
+        self.setWindowTitle("ShoeSnap Image Fetcher")
+        self.setMinimumSize(900, 600)
+        self.resize(1000, 650)
+
+        self.shoe_names = shoe_names
+        self.current_index = -1
+        self.candidates = []  # list of (bytes, w, h, source)
+        self.cards: list[ImageCard] = []
+        self.selected_card = -1
+        self.worker = None
+
+        self.fetched = 0
+        self.skipped = 0
+        self.failed = 0
+
+        FETCH_DIR.mkdir(exist_ok=True)
+
+        self._build_ui()
+        self._apply_theme()
+        self._advance()
+
+    def _build_ui(self):
+        central = QWidget()
+        self.setCentralWidget(central)
+        layout = QVBoxLayout(central)
+        layout.setContentsMargins(16, 16, 16, 16)
+        layout.setSpacing(10)
+
+        # Header
+        header = QHBoxLayout()
+        self.title_label = QLabel("ShoeSnap Image Fetcher")
+        self.title_label.setFont(QFont(FONT_UI, 16, QFont.Bold))
+        header.addWidget(self.title_label)
+        header.addStretch()
+
+        self.counter_label = QLabel("")
+        self.counter_label.setFont(QFont(FONT_UI, 12))
+        self.counter_label.setStyleSheet(f"color: {TEXT_DIM};")
+        header.addWidget(self.counter_label)
+        layout.addLayout(header)
+
+        # Current shoe name
+        self.shoe_label = QLabel("")
+        self.shoe_label.setFont(QFont(FONT_UI, 20, QFont.Bold))
+        self.shoe_label.setAlignment(Qt.AlignCenter)
+        layout.addWidget(self.shoe_label)
+
+        # Status
+        self.status_label = QLabel("")
+        self.status_label.setAlignment(Qt.AlignCenter)
+        self.status_label.setFont(QFont(FONT_UI, 10))
+        self.status_label.setStyleSheet(f"color: {TEXT_DIM};")
+        layout.addWidget(self.status_label)
+
+        # Scrollable image grid
+        self.scroll = QScrollArea()
+        self.scroll.setWidgetResizable(True)
+        self.scroll.setMinimumHeight(280)
+        self.grid_container = QWidget()
+        self.grid_layout = QHBoxLayout(self.grid_container)
+        self.grid_layout.setSpacing(10)
+        self.grid_layout.setContentsMargins(8, 8, 8, 8)
+        self.grid_layout.addStretch()
+        self.scroll.setWidget(self.grid_container)
+        layout.addWidget(self.scroll)
+
+        # Buttons
+        btn_row = QHBoxLayout()
+        btn_row.setSpacing(10)
+
+        self.skip_btn = QPushButton("Skip")
+        self.skip_btn.setFont(QFont(FONT_UI, 11))
+        self.skip_btn.setMinimumHeight(40)
+        self.skip_btn.setMinimumWidth(100)
+        self.skip_btn.clicked.connect(self._skip)
+        btn_row.addWidget(self.skip_btn)
+
+        btn_row.addStretch()
+
+        self.use_btn = QPushButton("Use This Image")
+        self.use_btn.setFont(QFont(FONT_UI, 12, QFont.Bold))
+        self.use_btn.setMinimumHeight(40)
+        self.use_btn.setMinimumWidth(180)
+        self.use_btn.setEnabled(False)
+        self.use_btn.clicked.connect(self._use_selected)
+        btn_row.addWidget(self.use_btn)
+
+        layout.addLayout(btn_row)
+
+        # Progress bar
+        self.progress_bar = QProgressBar()
+        self.progress_bar.setFixedHeight(6)
+        self.progress_bar.setTextVisible(False)
+        self.progress_bar.setRange(0, len(self.shoe_names))
+        layout.addWidget(self.progress_bar)
+
+    def _apply_theme(self):
+        self.setStyleSheet(f"""
+            QMainWindow, QWidget {{
+                background-color: {BG};
+                color: {TEXT};
+            }}
+            QScrollArea {{
+                border: 1px solid {BG_LIGHTER};
+                border-radius: 8px;
+                background-color: {BG};
+            }}
+            QPushButton {{
+                background-color: {ACCENT};
+                color: white;
+                border: none;
+                border-radius: 6px;
+                padding: 8px 20px;
+            }}
+            QPushButton:hover {{
+                background-color: #2563eb;
+            }}
+            QPushButton:disabled {{
+                background-color: {BG_LIGHTER};
+                color: {TEXT_DIM};
+            }}
+            QPushButton#skipBtn {{
+                background-color: {BG_LIGHTER};
+                color: {TEXT};
+            }}
+            QPushButton#skipBtn:hover {{
+                background-color: #4a4a4a;
+            }}
+            QProgressBar {{
+                background-color: {BG_LIGHT};
+                border: none;
+                border-radius: 3px;
+            }}
+            QProgressBar::chunk {{
+                background-color: {ACCENT};
+                border-radius: 3px;
+            }}
+        """)
+        self.skip_btn.setObjectName("skipBtn")
+        self.skip_btn.setStyle(self.skip_btn.style())
+
+    def _clear_grid(self):
+        self.cards.clear()
+        self.selected_card = -1
+        while self.grid_layout.count():
+            item = self.grid_layout.takeAt(0)
+            if item.widget():
+                item.widget().deleteLater()
+        self.grid_layout.addStretch()
+
+    def _advance(self):
+        self.current_index += 1
+        self.progress_bar.setValue(self.current_index)
+
+        if self.current_index >= len(self.shoe_names):
+            self._show_complete()
+            return
+
+        name = self.shoe_names[self.current_index]
+        filename = sanitize_filename(name)
+        out_path = FETCH_DIR / f"{filename}.jpg"
+
+        # Skip if already fetched
+        if out_path.exists():
+            self.skipped += 1
+            self._advance()
+            return
+
+        self.shoe_label.setText(name)
+        self.counter_label.setText(f"{self.current_index + 1} / {len(self.shoe_names)}")
+        self.status_label.setText("Searching...")
+        self.status_label.setStyleSheet(f"color: {ORANGE};")
+        self.use_btn.setEnabled(False)
+        self.skip_btn.setEnabled(False)
+        self._clear_grid()
+
+        # Start search
+        self.worker = SearchWorker(name)
+        self.worker.progress.connect(self._on_search_progress)
+        self.worker.finished.connect(self._on_search_done)
+        self.worker.start()
+
+    def _on_search_progress(self, msg: str):
+        self.status_label.setText(msg)
+
+    def _on_search_done(self, shoe_name: str, candidates: list):
+        self.candidates = candidates
+        self._clear_grid()
+
+        if not candidates:
+            self.status_label.setText("No images found")
+            self.status_label.setStyleSheet(f"color: {RED};")
+            self.skip_btn.setEnabled(True)
+            return
+
+        self.status_label.setText(f"Click an image to select it")
+        self.status_label.setStyleSheet(f"color: {TEXT_DIM};")
+
+        # Remove the trailing stretch before adding cards
+        while self.grid_layout.count():
+            item = self.grid_layout.takeAt(0)
+
+        for i, (data, w, h, source) in enumerate(candidates):
+            card = ImageCard(i, data, w, h, source)
+            card.clicked.connect(self._on_card_clicked)
+            self.cards.append(card)
+            self.grid_layout.addWidget(card)
+
+        self.grid_layout.addStretch()
+        self.skip_btn.setEnabled(True)
+
+    def _on_card_clicked(self, index: int):
+        self.selected_card = index
+        for i, card in enumerate(self.cards):
+            card.set_selected(i == index)
+        self.use_btn.setEnabled(True)
+
+    def _use_selected(self):
+        if self.selected_card < 0 or self.selected_card >= len(self.candidates):
+            return
+
+        data = self.candidates[self.selected_card][0]
+        name = self.shoe_names[self.current_index]
+        filename = sanitize_filename(name)
+        out_path = FETCH_DIR / f"{filename}.jpg"
+        out_path.write_bytes(data)
+
+        self.status_label.setText(f"Saved: {filename}.jpg")
+        self.status_label.setStyleSheet(f"color: {GREEN};")
+        self.fetched += 1
+
+        # Brief pause so user sees the "Saved" message
+        from PyQt5.QtCore import QTimer
+        QTimer.singleShot(300, self._advance)
+
+    def _skip(self):
+        self.failed += 1
+        self._advance()
+
+    def _show_complete(self):
+        self._clear_grid()
+        self.shoe_label.setText("All done!")
+        self.counter_label.setText("")
+        self.status_label.setText(
+            f"Fetched: {self.fetched}  |  Skipped (already had): {self.skipped}  |  Skipped: {self.failed}"
+        )
+        self.status_label.setStyleSheet(f"color: {GREEN};")
+        self.use_btn.setVisible(False)
+        self.skip_btn.setText("Close")
+        self.skip_btn.setEnabled(True)
+        self.skip_btn.clicked.disconnect()
+        self.skip_btn.clicked.connect(self.close)
+        self.progress_bar.setValue(len(self.shoe_names))
 
 
 def main():
-    auto_mode = "--auto" in sys.argv
-    args = [a for a in sys.argv[1:] if not a.startswith("--")]
-    list_file = Path(args[0]) if args else DEFAULT_LIST
+    list_file = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_LIST
 
     if not list_file.exists():
         print(f"Shoe list not found: {list_file}")
@@ -214,55 +494,22 @@ def main():
         print("No shoe names found in the file.")
         sys.exit(1)
 
-    FETCH_DIR.mkdir(exist_ok=True)
+    app = QApplication(sys.argv)
+    app.setStyle("Fusion")
 
-    print(f"ShoeSnap Image Fetcher")
-    print(f"{'=' * 40}")
-    print(f"Shoes to fetch: {len(shoe_names)}")
-    print(f"Output folder:  {FETCH_DIR}")
-    print(f"Mode:           {'auto' if auto_mode else 'interactive'}")
-    print()
+    palette = QPalette()
+    palette.setColor(QPalette.Window, QColor(BG))
+    palette.setColor(QPalette.WindowText, QColor(TEXT))
+    palette.setColor(QPalette.Base, QColor(BG_LIGHT))
+    palette.setColor(QPalette.Text, QColor(TEXT))
+    palette.setColor(QPalette.Button, QColor(BG_LIGHTER))
+    palette.setColor(QPalette.ButtonText, QColor(TEXT))
+    palette.setColor(QPalette.Highlight, QColor(ACCENT))
+    app.setPalette(palette)
 
-    fetched = 0
-    skipped = 0
-    failed = 0
-
-    for i, name in enumerate(shoe_names):
-        print(f"[{i + 1}/{len(shoe_names)}] {name}")
-
-        filename = sanitize_filename(name)
-        out_path = FETCH_DIR / f"{filename}.jpg"
-
-        # Skip if already fetched
-        if out_path.exists():
-            print(f"  Already exists, skipping")
-            skipped += 1
-            continue
-
-        # Search
-        urls = search_shoe_images(name)
-
-        # Pick
-        if auto_mode:
-            data = pick_image_auto(name, urls)
-        else:
-            data = pick_image_interactive(name, urls)
-
-        if data:
-            out_path.write_bytes(data)
-            print(f"  Saved: {out_path.name}")
-            fetched += 1
-        else:
-            failed += 1
-
-        # Small delay between searches to be polite
-        if i < len(shoe_names) - 1:
-            time.sleep(random.uniform(1.0, 2.5))
-
-    print(f"\n{'=' * 40}")
-    print(f"Done! Fetched: {fetched} | Skipped: {skipped} | Failed: {failed}")
-    print(f"Output: {FETCH_DIR}")
-    print(f"\nNext step: drag the fetched/ folder into ShoeSnap to process all images.")
+    window = FetcherWindow(shoe_names)
+    window.show()
+    sys.exit(app.exec())
 
 
 if __name__ == "__main__":
