@@ -113,11 +113,138 @@ def download_image(url: str, timeout: int = 15) -> bytes | None:
         return None
 
 
+# ── Image quality scoring ──
+
+# Preferred sources — brand sites and major retailers have the cleanest shots
+PREFERRED_DOMAINS = [
+    "asics.com", "nike.com", "hoka.com", "brooksrunning.com", "newbalance.com",
+    "saucony.com", "adidas.com", "on-running.com", "puma.com", "mizuno",
+    "altrarunning.com", "salomon.com", "topo", "inov-8",
+    "runningwarehouse.com", "zappos.com", "dickssportinggoods.com",
+    "runningshoesguru.com", "roadtrailrun.com", "believeintherun.com",
+    "deckers.com",
+]
+
+# URL patterns that indicate bad images (comparisons, collages, lifestyle)
+BAD_URL_PATTERNS = [
+    "comparison", "vs", "versus", "collage", "outfit", "lifestyle",
+    "on-feet", "on_feet", "onfeet", "review-photo", "unboxing",
+    "top-view", "top_view", "topview", "bottom", "sole",
+    "pair", "both", "box",
+]
+
+
+def score_candidate(data: bytes, w: int, h: int, source: str, url: str) -> float:
+    """Score an image for how likely it is to be a clean side-profile product shot.
+
+    Higher = better. Combines:
+    - Aspect ratio (landscape ~1.4:1 to 2.2:1 is ideal for side profile)
+    - Corner brightness (white/light background = product shot)
+    - Resolution (larger = more detail)
+    - Source domain (brand sites and retailers preferred)
+    - URL pattern filtering (penalise comparison/lifestyle URLs)
+    - Single-shoe detection (penalise images with multiple shoes)
+    """
+    score = 0.0
+
+    if w == 0 or h == 0:
+        return -100
+
+    # ── Aspect ratio (0-25 points) ──
+    ratio = w / h
+    if 1.3 <= ratio <= 2.5:
+        # Sweet spot for side profile
+        score += 25
+        # Bonus for the most common product photo ratios
+        if 1.5 <= ratio <= 2.0:
+            score += 10
+    elif 1.0 <= ratio < 1.3:
+        # Slightly tall — could be OK
+        score += 5
+    elif ratio < 1.0:
+        # Portrait — almost never a side profile
+        score -= 20
+    elif ratio > 2.5:
+        # Very wide — could be a banner/comparison
+        score -= 10
+
+    # ── Corner brightness / white background (0-25 points) ──
+    try:
+        img = Image.open(BytesIO(data)).convert("RGB")
+        import numpy as np
+        arr = np.array(img)
+        h_px, w_px = arr.shape[:2]
+        # Sample 20x20 patches from each corner
+        patch = 20
+        corners = [
+            arr[:patch, :patch],           # top-left
+            arr[:patch, -patch:],          # top-right
+            arr[-patch:, :patch],          # bottom-left
+            arr[-patch:, -patch:],         # bottom-right
+        ]
+        avg_brightness = np.mean([c.mean() for c in corners])
+
+        if avg_brightness > 240:
+            # Very white corners — classic product shot
+            score += 25
+        elif avg_brightness > 220:
+            score += 18
+        elif avg_brightness > 200:
+            score += 10
+        elif avg_brightness < 100:
+            # Dark background — lifestyle/editorial shot
+            score -= 15
+
+        # ── Multi-shoe detection (penalty) ──
+        # Check if there's significant content in both left and right halves
+        # A single side-profile shoe is mostly in the centre
+        mid = w_px // 2
+        left_half = arr[:, :mid // 2]
+        right_half = arr[:, mid + mid // 2:]
+        # If both far edges have lots of non-white pixels, likely multiple shoes
+        left_dark = np.mean(left_half < 200)
+        right_dark = np.mean(right_half < 200)
+        if left_dark > 0.3 and right_dark > 0.3:
+            score -= 15  # probably multiple shoes or a comparison
+
+    except Exception:
+        pass
+
+    # ── Resolution (0-15 points) ──
+    pixels = w * h
+    if pixels >= 1_000_000:
+        score += 15
+    elif pixels >= 500_000:
+        score += 10
+    elif pixels >= 250_000:
+        score += 5
+    else:
+        score -= 5
+
+    # ── Source domain (0-15 points) ──
+    source_lower = source.lower()
+    if any(domain in source_lower for domain in PREFERRED_DOMAINS):
+        score += 15
+
+    # ── URL pattern penalties ──
+    url_lower = url.lower()
+    for bad in BAD_URL_PATTERNS:
+        if bad in url_lower:
+            score -= 20
+            break
+
+    # ── Bonus: URL contains "side" or "lateral" ──
+    if "side" in url_lower or "lateral" in url_lower:
+        score += 10
+
+    return score
+
+
 # ── Search worker (runs in background thread) ──
 
 class SearchWorker(QThread):
     """Search for a shoe and download candidate images."""
-    finished = pyqtSignal(str, list)  # shoe_name, list of (bytes, width, height, source)
+    finished = pyqtSignal(str, list)  # shoe_name, list of (bytes, width, height, source, score)
     progress = pyqtSignal(str)
 
     def __init__(self, shoe_name: str):
@@ -126,33 +253,39 @@ class SearchWorker(QThread):
 
     def run(self):
         self.progress.emit(f"Searching for {self.shoe_name}...")
-        query = f"{self.shoe_name} running shoe side view"
+        query = f"{self.shoe_name} side profile product photo white background"
         url = SEARCH_URL.format(quote_plus(query))
 
         try:
             resp = requests.get(url, headers=HEADERS, timeout=15)
             resp.raise_for_status()
-            urls = extract_image_urls(resp.text)
+            urls = extract_image_urls(resp.text, max_results=15)
         except Exception as e:
             self.progress.emit(f"Search failed: {e}")
             self.finished.emit(self.shoe_name, [])
             return
 
+        # Download more candidates than we show, score them, show the best
         candidates = []
-        for i, img_url in enumerate(urls[:6]):
-            self.progress.emit(f"Downloading image {i + 1}/{min(len(urls), 6)}...")
+        for i, img_url in enumerate(urls):
+            self.progress.emit(f"Downloading image {i + 1}/{len(urls)}...")
             data = download_image(img_url)
             if data:
                 try:
                     img = Image.open(BytesIO(data))
                     w, h = img.size
                 except Exception:
-                    w, h = 0, 0
+                    continue
                 domain = re.search(r'https?://([^/]+)', img_url)
                 source = domain.group(1) if domain else "unknown"
-                candidates.append((data, w, h, source))
+                sc = score_candidate(data, w, h, source, img_url)
+                candidates.append((data, w, h, source, sc))
 
-        self.finished.emit(self.shoe_name, candidates)
+        # Sort by score descending — best candidates first
+        candidates.sort(key=lambda c: c[4], reverse=True)
+
+        # Only show top 6
+        self.finished.emit(self.shoe_name, candidates[:6])
 
 
 # ── Image candidate card ──
@@ -161,10 +294,11 @@ class ImageCard(QFrame):
     """Clickable image preview card."""
     clicked = pyqtSignal(int)
 
-    def __init__(self, index: int, data: bytes, width: int, height: int, source: str):
+    def __init__(self, index: int, data: bytes, width: int, height: int, source: str, score: float = 0):
         super().__init__()
         self.index = index
         self.data = data
+        self.score = score
         self.setCursor(Qt.PointingHandCursor)
         self.setFrameStyle(QFrame.Box)
         self.setLineWidth(2)
@@ -419,15 +553,15 @@ class FetcherWindow(QMainWindow):
             self.skip_btn.setEnabled(True)
             return
 
-        self.status_label.setText(f"Click an image to select it")
+        self.status_label.setText(f"Sorted by quality — click an image to select it")
         self.status_label.setStyleSheet(f"color: {TEXT_DIM};")
 
         # Remove the trailing stretch before adding cards
         while self.grid_layout.count():
             item = self.grid_layout.takeAt(0)
 
-        for i, (data, w, h, source) in enumerate(candidates):
-            card = ImageCard(i, data, w, h, source)
+        for i, (data, w, h, source, sc) in enumerate(candidates):
+            card = ImageCard(i, data, w, h, source, sc)
             card.clicked.connect(self._on_card_clicked)
             self.cards.append(card)
             self.grid_layout.addWidget(card)
