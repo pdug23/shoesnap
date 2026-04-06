@@ -128,8 +128,8 @@ def validate_shoe(shoe: dict, shoebase: list, errors: list, warnings: list):
     # Check archetype rules
     if shoe.get("is_super_trainer") and shoe.get("is_race_shoe"):
         warnings.append(f"{name}: Super trainer should NOT also be race shoe")
-    if shoe.get("is_recovery_shoe") and shoe.get("weight_g") and shoe["weight_g"] < 270:
-        warnings.append(f"{name}: Recovery shoe at {shoe['weight_g']}g — usually >270g")
+    if shoe.get("is_daily_trainer") and not shoe.get("is_recovery_shoe"):
+        warnings.append(f"{name}: Daily trainer should also be recovery shoe (all daily trainers are)")
 
 
 def main():

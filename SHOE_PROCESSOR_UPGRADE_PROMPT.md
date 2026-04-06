@@ -252,7 +252,7 @@ Modifiers:
 
 **Trail shoe adjustments:** Bounce context shifts (65%+ = exceptional, score 4). Rocker: moderate trail rocker = 2. Ground feel: rock plates pull down by 1.
 
-**Recovery shoe criteria:** Cushion ≥4 AND weight ≥270g AND designed for easy pace, OR explicitly marketed as recovery. NOT just soft — needs to be slow (low bounce, heavy). Super trainers are NOT recovery shoes.
+**Recovery shoe criteria:** All daily trainers and super trainers are also recovery shoes. If you can run daily miles in it, you can do recovery runs in it. Do NOT gate recovery on weight or bounce — the database consistently applies this rule across all 180 shoes.
 
 ### Common Scoring Mistakes (Hard-Won Lessons from 185 Shoes)
 
