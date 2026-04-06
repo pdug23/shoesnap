@@ -3421,7 +3421,7 @@
     "data_confidence": "lab",
     "heel_stack_mm": 38.8,
     "forefoot_stack_mm": 28.1,
-    "has_image": false
+    "has_image": true
   },
   {
     "shoe_id": "shoe_0142",
@@ -3471,7 +3471,7 @@
     "data_confidence": "lab",
     "heel_stack_mm": 44.5,
     "forefoot_stack_mm": 31.1,
-    "has_image": false
+    "has_image": true
   },
   {
     "shoe_id": "shoe_0002",

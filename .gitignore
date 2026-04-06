@@ -12,9 +12,9 @@ venv/
 env/
 
 # Image pipeline output
+images/raw/
 images/downloaded/
 images/processed/
-fetched/
 
 # Logo pipeline output
 logos/raw/
@@ -41,5 +41,6 @@ Desktop.ini
 
 # Legacy directories
 output/
+fetched/
 downloaded_files/
 logos_raw/
