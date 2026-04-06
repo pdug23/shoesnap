@@ -74,16 +74,20 @@ def sanitize_filename(name: str) -> str:
 
 def extract_image_urls(html: str, max_results: int = 8) -> list[str]:
     """Extract full-size image URLs from Bing Images HTML."""
+    from html import unescape
     from urllib.parse import unquote
+
+    # Bing HTML-encodes quotes as &quot; — decode first
+    decoded = unescape(html)
+
     urls = []
     seen = set()
 
     # Bing embeds full-size URLs as "murl":"https://..." in JSON metadata
-    for match in re.finditer(r'"murl"\s*:\s*"(https?://[^"]+)"', html):
+    for match in re.finditer(r'"murl"\s*:\s*"(https?://[^"]+)"', decoded):
         url = unquote(match.group(1))
         if url in seen:
             continue
-        # Skip Bing's own assets
         if "bing.com" in url or "microsoft.com" in url:
             continue
         seen.add(url)
