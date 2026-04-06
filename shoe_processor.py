@@ -218,6 +218,7 @@ class MainWindow(QMainWindow):
         self.current_bytes: bytes | None = None
         self.worker: RemoveBgWorker | None = None
         self.processing = False
+        self.auto_mode = False
         self.log: list[dict] = []
 
         self._load_existing_log()
@@ -279,6 +280,12 @@ class MainWindow(QMainWindow):
         self.skip_btn.setMinimumHeight(38)
         self.skip_btn.clicked.connect(self._skip_current)
         name_row.addWidget(self.skip_btn)
+
+        self.auto_btn = QPushButton("Process All")
+        self.auto_btn.setFont(QFont(FONT_UI, 11, QFont.Bold))
+        self.auto_btn.setMinimumHeight(38)
+        self.auto_btn.clicked.connect(self._start_auto_mode)
+        name_row.addWidget(self.auto_btn)
 
         layout.addLayout(name_row)
 
@@ -359,6 +366,7 @@ class MainWindow(QMainWindow):
         self.png_label.setVisible(visible)
         self.process_btn.setVisible(visible)
         self.skip_btn.setVisible(visible)
+        self.auto_btn.setVisible(visible)
         self.counter_label.setVisible(visible)
 
     def _set_status(self, text: str, color: str = TEXT_DIM):
@@ -423,6 +431,10 @@ class MainWindow(QMainWindow):
         self._set_status(f"{Path(filepath).name}", TEXT_DIM)
         self.process_btn.setText("Process")
         self._set_processing(False)
+
+        # In auto mode, start processing immediately
+        if self.auto_mode:
+            self._process_current()
 
     # ── Processing ──
 
@@ -522,8 +534,25 @@ class MainWindow(QMainWindow):
             self._set_status("Skipped", TEXT_DIM)
         self._advance()
 
+    def _start_auto_mode(self):
+        """Process all remaining images automatically using suggested filenames."""
+        self.auto_mode = True
+        self.auto_btn.setEnabled(False)
+        self.auto_btn.setText("Processing...")
+        self.skip_btn.setEnabled(False)
+        self._process_current()
+
+    def _stop_auto_mode(self):
+        self.auto_mode = False
+        self.auto_btn.setEnabled(True)
+        self.auto_btn.setText("Process All")
+
     def _show_error_with_skip(self):
         """Show skip button so user can read the error and advance when ready."""
+        if self.auto_mode:
+            # In auto mode, skip errors and keep going
+            self._advance()
+            return
         self.skip_btn.setVisible(True)
         self.skip_btn.setEnabled(True)
         self.process_btn.setVisible(True)
@@ -539,6 +568,7 @@ class MainWindow(QMainWindow):
     # ── Completion ──
 
     def _show_complete(self):
+        self._stop_auto_mode()
         self.progress_bar.setValue(len(self.image_queue))
         self._set_controls_visible(False)
 

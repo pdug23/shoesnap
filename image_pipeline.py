@@ -121,14 +121,16 @@ def remove_shadows(img: Image.Image) -> Image.Image:
 def detect_toe_direction(img: Image.Image) -> str:
     """Detect whether the shoe toe points 'left' or 'right'.
 
-    Heuristic: running shoes taper toward the toe.  We compare the number of
-    opaque pixels in the left 25 % of the bounding box vs the right 25 %.
-    The side with *fewer* opaque pixels is the tapered (toe) end.
+    Heuristic: the heel side of a running shoe is taller (collar/ankle)
+    than the toe side.  We compare the average vertical position (center
+    of mass) of opaque pixels in the left vs right quarter of the bounding
+    box.  The side where pixels reach *higher* (lower row values) is the
+    heel; the other side is the toe.
     """
     alpha = np.array(img.getchannel("A"))
-    rows, cols = np.where(alpha > 20)  # ignore near-transparent fringe
+    rows, cols = np.where(alpha > 20)
     if len(rows) == 0:
-        return "right"  # empty image, nothing to flip
+        return "right"
 
     x0, x1 = cols.min(), cols.max()
     bbox_w = x1 - x0
@@ -137,10 +139,20 @@ def detect_toe_direction(img: Image.Image) -> str:
     left_mask = cols <= (x0 + quarter)
     right_mask = cols >= (x1 - quarter)
 
-    left_count = int(left_mask.sum())
-    right_count = int(right_mask.sum())
+    if not left_mask.any() or not right_mask.any():
+        return "right"
 
-    return "left" if left_count < right_count else "right"
+    # Average vertical position (lower value = higher on screen = taller)
+    left_avg_y = rows[left_mask].mean()
+    right_avg_y = rows[right_mask].mean()
+
+    # The heel side has a lower avg_y (pixels reach higher).
+    # The toe side has a higher avg_y (pixels sit lower).
+    # If left has lower avg_y → heel is on the left → toe points right.
+    if left_avg_y < right_avg_y:
+        return "right"  # heel left, toe right
+    else:
+        return "left"   # heel right, toe left
 
 
 def auto_mirror(img: Image.Image, target: str = "right") -> Image.Image:
