@@ -26,7 +26,7 @@ from PyQt5.QtWidgets import (
     QLabel, QPushButton, QProgressBar, QScrollArea, QFrame,
 )
 
-from logo_pipeline import process_logo
+from logo_pipeline import process_logo, process_logo_svg, is_svg
 
 LOGOS_RAW_DIR = Path(__file__).parent / "logos_raw"
 LOGOS_DIR = Path(__file__).parent / "logos"
@@ -94,14 +94,34 @@ def download_image(url: str, timeout: int = 15) -> bytes | None:
         resp = requests.get(url, headers=HEADERS, timeout=timeout)
         resp.raise_for_status()
         content_type = resp.headers.get("Content-Type", "")
-        if "image" not in content_type and "octet-stream" not in content_type:
+        if not any(t in content_type for t in ["image", "octet-stream", "svg"]):
             return None
         data = resp.content
-        if len(data) < 1000:
+        if len(data) < 500:
             return None
         return data
     except Exception:
         return None
+
+
+def _parse_svg_dimensions(data: bytes) -> tuple[int, int]:
+    """Try to extract width/height from an SVG's viewBox or attributes."""
+    try:
+        text = data.decode("utf-8", errors="ignore")
+        # Try viewBox first
+        vb = re.search(r'viewBox\s*=\s*"([^"]+)"', text)
+        if vb:
+            parts = vb.group(1).replace(',', ' ').split()
+            if len(parts) == 4:
+                return int(float(parts[2])), int(float(parts[3]))
+        # Try width/height attributes
+        w_m = re.search(r'width\s*=\s*"([\d.]+)', text)
+        h_m = re.search(r'height\s*=\s*"([\d.]+)', text)
+        if w_m and h_m:
+            return int(float(w_m.group(1))), int(float(h_m.group(1)))
+    except Exception:
+        pass
+    return 0, 0
 
 
 # ── Logo scoring ──
@@ -110,7 +130,13 @@ def score_logo(data: bytes, w: int, h: int, source: str, url: str) -> float:
     """Score how likely an image is to be a clean brand logo."""
     score = 0.0
 
+    # SVGs get a massive bonus — they're always preferred
+    if is_svg(data):
+        score += 50
+
     if w == 0 or h == 0:
+        if is_svg(data):
+            return score + 20  # SVG without parsed dimensions is still good
         return -100
 
     # ── Aspect ratio: logos are typically landscape or square ──
@@ -185,16 +211,36 @@ class SearchWorker(QThread):
         self.brand_name = brand_name
 
     def run(self):
-        self.progress.emit(f"Searching for {self.brand_name} logo...")
-        query = f"{self.brand_name} logo transparent PNG"
-        url = SEARCH_URL.format(quote_plus(query))
+        all_urls = []
 
+        # Search 1: SVG logos (preferred)
+        self.progress.emit(f"Searching for {self.brand_name} SVG logo...")
+        svg_query = f"{self.brand_name} logo SVG vector"
         try:
-            resp = requests.get(url, headers=HEADERS, timeout=15)
+            resp = requests.get(SEARCH_URL.format(quote_plus(svg_query)), headers=HEADERS, timeout=15)
             resp.raise_for_status()
-            urls = extract_image_urls(resp.text, max_results=12)
-        except Exception as e:
-            self.progress.emit(f"Search failed: {e}")
+            all_urls.extend(extract_image_urls(resp.text, max_results=8))
+        except Exception:
+            pass
+
+        # Search 2: transparent PNG logos (fallback)
+        self.progress.emit(f"Searching for {self.brand_name} transparent logo...")
+        png_query = f"{self.brand_name} logo transparent PNG"
+        try:
+            resp = requests.get(SEARCH_URL.format(quote_plus(png_query)), headers=HEADERS, timeout=15)
+            resp.raise_for_status()
+            # Deduplicate
+            existing = set(all_urls)
+            for u in extract_image_urls(resp.text, max_results=8):
+                if u not in existing:
+                    all_urls.append(u)
+                    existing.add(u)
+        except Exception:
+            pass
+
+        urls = all_urls
+        if not urls:
+            self.progress.emit("No logos found")
             self.finished.emit(self.brand_name, [])
             return
 
@@ -203,11 +249,15 @@ class SearchWorker(QThread):
             self.progress.emit(f"Downloading {i + 1}/{len(urls)}...")
             data = download_image(img_url)
             if data:
-                try:
-                    img = Image.open(BytesIO(data))
-                    w, h = img.size
-                except Exception:
-                    continue
+                if is_svg(data):
+                    # SVG — try to extract dimensions from viewBox/width/height
+                    w, h = _parse_svg_dimensions(data)
+                else:
+                    try:
+                        img = Image.open(BytesIO(data))
+                        w, h = img.size
+                    except Exception:
+                        continue
                 domain = re.search(r'https?://([^/]+)', img_url)
                 source = domain.group(1) if domain else "unknown"
                 sc = score_logo(data, w, h, source, img_url)
@@ -244,17 +294,23 @@ class LogoCard(QFrame):
             "background-color: #ffffff; border: 1px solid #555;"
         )
 
+        self.is_svg = is_svg(data)
         qimg = QImage.fromData(data)
         if not qimg.isNull():
             pixmap = QPixmap.fromImage(qimg)
             scaled = pixmap.scaled(180, 100, Qt.KeepAspectRatio, Qt.SmoothTransformation)
             self.image_label.setPixmap(scaled)
+        elif self.is_svg:
+            self.image_label.setText("SVG (preview N/A)")
+            self.image_label.setStyleSheet("background-color: #333; border: 1px solid #555; color: #aaa;")
         else:
             self.image_label.setText("Failed")
 
         layout.addWidget(self.image_label, alignment=Qt.AlignCenter)
 
-        info = QLabel(f"{width}x{height}")
+        fmt = "SVG" if self.is_svg else "PNG"
+        dim_str = f"{width}x{height}" if width > 0 else "vector"
+        info = QLabel(f"{fmt}  |  {dim_str}")
         info.setAlignment(Qt.AlignCenter)
         info.setFont(QFont(FONT_MONO, 9))
         info.setStyleSheet(f"color: {TEXT_DIM}; border: none;")
@@ -406,7 +462,7 @@ class FetcherWindow(QMainWindow):
         launched = 0
         while launched < self.PREFETCH_AHEAD and idx < len(self.brand_names):
             filename = sanitize_filename(self.brand_names[idx])
-            if (LOGOS_DIR / f"{filename}-logo.webp").exists():
+            if (LOGOS_DIR / f"{filename}-logo.svg").exists() or (LOGOS_DIR / f"{filename}-logo.webp").exists():
                 idx += 1
                 continue
             if idx in self.prefetch_cache or idx in self.prefetch_in_flight:
@@ -441,7 +497,7 @@ class FetcherWindow(QMainWindow):
         name = self.brand_names[self.current_index]
         filename = sanitize_filename(name)
 
-        if (LOGOS_DIR / f"{filename}-logo.webp").exists():
+        if (LOGOS_DIR / f"{filename}-logo.svg").exists() or (LOGOS_DIR / f"{filename}-logo.webp").exists():
             self.skipped += 1
             self._show_brand(self.current_index + 1)
             return
@@ -509,15 +565,24 @@ class FetcherWindow(QMainWindow):
         filename = sanitize_filename(name)
 
         # Save raw
-        raw_path = LOGOS_RAW_DIR / f"{filename}-logo-raw.png"
+        raw_ext = "svg" if is_svg(data) else "png"
+        raw_path = LOGOS_RAW_DIR / f"{filename}-logo-raw.{raw_ext}"
         raw_path.write_bytes(data)
 
         # Process through pipeline and save
         try:
-            processed = process_logo(data)
-            out_path = LOGOS_DIR / f"{filename}-logo.webp"
-            out_path.write_bytes(processed)
-            self.status_label.setText(f"Saved: {filename}-logo.webp")
+            if is_svg(data):
+                # SVG → processed SVG
+                svg_str = process_logo_svg(data)
+                out_path = LOGOS_DIR / f"{filename}-logo.svg"
+                out_path.write_text(svg_str, encoding="utf-8")
+                self.status_label.setText(f"Saved: {filename}-logo.svg")
+            else:
+                # Bitmap → processed WebP
+                processed = process_logo(data)
+                out_path = LOGOS_DIR / f"{filename}-logo.webp"
+                out_path.write_bytes(processed)
+                self.status_label.setText(f"Saved: {filename}-logo.webp")
             self.status_label.setStyleSheet(f"color: {GREEN};")
         except Exception as e:
             self.status_label.setText(f"Processing failed: {e}")

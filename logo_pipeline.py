@@ -1,17 +1,20 @@
 """Logo processing pipeline — standardise brand logos to a consistent spec.
 
 Spec:
-    Canvas: 400x160px, transparent background
+    Canvas: 400x160px viewBox, transparent background
     Content: Centred, filling ~85% of constraining dimension
-    Colour: Single flat colour (black on transparent)
-    Format: WebP output
+    Colour: White on transparent
+    Format: SVG (preferred) or WebP fallback
     Padding: ~5% margin from canvas edges
 
 Usage:
-    from logo_pipeline import process_logo
-    webp_bytes = process_logo(image_bytes)
+    from logo_pipeline import process_logo_svg, process_logo
+    svg_str = process_logo_svg(svg_bytes)     # SVG → SVG
+    webp_bytes = process_logo(image_bytes)     # bitmap → WebP
 """
 
+import re
+import xml.etree.ElementTree as ET
 from io import BytesIO
 
 import numpy as np
@@ -26,6 +29,130 @@ WEBP_QUALITY = 90     # higher quality for logos (sharp edges matter)
 BW_THRESHOLD = 128    # threshold for separating logo from background
 LOGO_COLOUR = (255, 255, 255)  # white logos on transparent background
 
+
+# ── SVG processing ──
+
+def is_svg(data: bytes) -> bool:
+    """Check if the data looks like an SVG file."""
+    try:
+        head = data[:500].decode("utf-8", errors="ignore").lower().strip()
+        return "<svg" in head or "<?xml" in head and "svg" in head
+    except Exception:
+        return False
+
+
+def process_logo_svg(svg_data: bytes) -> str:
+    """Process an SVG logo: force all colours to white, set viewBox to 400x160.
+
+    Returns the processed SVG as a string.
+    """
+    svg_text = svg_data.decode("utf-8", errors="ignore")
+
+    # Strip XML declaration if present — we'll add a clean one
+    svg_text = re.sub(r'<\?xml[^?]*\?>\s*', '', svg_text)
+
+    # Parse the SVG
+    # Register common SVG namespaces to avoid ns0: prefixes
+    ET.register_namespace('', 'http://www.w3.org/2000/svg')
+    ET.register_namespace('xlink', 'http://www.w3.org/1999/xlink')
+
+    root = ET.fromstring(svg_text)
+
+    # Get the SVG namespace (if any)
+    ns_match = re.match(r'\{(.+?)\}', root.tag)
+    ns = ns_match.group(1) if ns_match else ''
+    ns_prefix = f'{{{ns}}}' if ns else ''
+
+    # ── Force all colours to white ──
+    _force_white(root, ns_prefix)
+
+    # Add a default white fill to the root element
+    root.set('fill', 'white')
+
+    # ── Set viewBox to 400x160 ──
+    # Preserve the original viewBox aspect ratio and centre within 400x160
+    orig_vb = root.get('viewBox')
+    if orig_vb:
+        parts = orig_vb.replace(',', ' ').split()
+        if len(parts) == 4:
+            vb_x, vb_y, vb_w, vb_h = [float(p) for p in parts]
+        else:
+            vb_w, vb_h = 400, 160
+            vb_x, vb_y = 0, 0
+    else:
+        # Try width/height attributes
+        w_attr = root.get('width', '400')
+        h_attr = root.get('height', '160')
+        vb_w = float(re.sub(r'[^0-9.]', '', w_attr) or '400')
+        vb_h = float(re.sub(r'[^0-9.]', '', h_attr) or '160')
+        vb_x, vb_y = 0, 0
+
+    # Calculate scaling to fit within 400x160 at 85% fill
+    target_w = CANVAS_W * FILL_PCT
+    target_h = CANVAS_H * FILL_PCT
+    scale = min(target_w / vb_w, target_h / vb_h) if vb_w > 0 and vb_h > 0 else 1
+
+    # Scaled dimensions
+    scaled_w = vb_w * scale
+    scaled_h = vb_h * scale
+
+    # Offset to centre
+    offset_x = (CANVAS_W - scaled_w) / 2
+    offset_y = (CANVAS_H - scaled_h) / 2
+
+    # Wrap content in a group with transform to centre it
+    root.set('viewBox', f'0 0 {CANVAS_W} {CANVAS_H}')
+    root.set('width', str(CANVAS_W))
+    root.set('height', str(CANVAS_H))
+
+    # Create a wrapper group
+    wrapper = ET.Element(f'{ns_prefix}g')
+    wrapper.set('transform', f'translate({offset_x:.2f},{offset_y:.2f}) scale({scale:.6f}) translate({-vb_x:.2f},{-vb_y:.2f})')
+
+    # Move all children into the wrapper
+    children = list(root)
+    for child in children:
+        # Skip defs, they stay at root level
+        tag_local = child.tag.split('}')[-1] if '}' in child.tag else child.tag
+        if tag_local == 'defs':
+            continue
+        root.remove(child)
+        wrapper.append(child)
+
+    root.append(wrapper)
+
+    # Serialize
+    svg_output = ET.tostring(root, encoding='unicode')
+
+    # Add XML declaration
+    svg_output = '<?xml version="1.0" encoding="UTF-8"?>\n' + svg_output
+
+    return svg_output
+
+
+def _force_white(element: ET.Element, ns_prefix: str):
+    """Recursively force all fill and stroke colours to white in an SVG element."""
+    # Attributes to recolour
+    for attr in ('fill', 'stroke', 'stop-color', 'flood-color', 'lighting-color'):
+        val = element.get(attr, '').lower().strip()
+        if val and val != 'none' and val != 'transparent':
+            element.set(attr, 'white')
+
+    # Handle inline style attribute
+    style = element.get('style', '')
+    if style:
+        # Replace colour values in style
+        style = re.sub(r'fill\s*:\s*[^;]+', 'fill: white', style)
+        style = re.sub(r'stroke\s*:\s*[^;]+', 'stroke: white', style)
+        style = re.sub(r'stop-color\s*:\s*[^;]+', 'stop-color: white', style)
+        element.set('style', style)
+
+    # Recurse into children
+    for child in element:
+        _force_white(child, ns_prefix)
+
+
+# ── Bitmap processing ──
 
 def load_rgba(data: bytes) -> Image.Image:
     """Open image bytes and ensure RGBA mode."""
