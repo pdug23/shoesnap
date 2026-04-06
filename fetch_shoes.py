@@ -259,7 +259,7 @@ class SearchWorker(QThread):
         try:
             resp = requests.get(url, headers=HEADERS, timeout=15)
             resp.raise_for_status()
-            urls = extract_image_urls(resp.text, max_results=15)
+            urls = extract_image_urls(resp.text, max_results=10)
         except Exception as e:
             self.progress.emit(f"Search failed: {e}")
             self.finished.emit(self.shoe_name, [])
@@ -285,7 +285,7 @@ class SearchWorker(QThread):
         candidates.sort(key=lambda c: c[4], reverse=True)
 
         # Only show top 6
-        self.finished.emit(self.shoe_name, candidates[:6])
+        self.finished.emit(self.shoe_name, candidates)
 
 
 # ── Image candidate card ──
