@@ -725,23 +725,37 @@ class FetcherWindow(QMainWindow):
         self.progress_bar.setValue(len(self.shoe_names))
 
 
+def _load_shoe_names_from_db() -> list[str]:
+    """Load shoe names that need images from shoebase.json (has_image=false)."""
+    import json
+    db_path = _REPO_DIR / "database" / "shoebase.json"
+    if not db_path.exists():
+        return []
+    shoes = json.loads(db_path.read_text(encoding="utf-8"))
+    return [s["full_name"] for s in shoes if not s.get("has_image", True)]
+
+
 def main():
-    list_file = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_LIST
+    # Primary: get shoes needing images from shoebase.json
+    shoe_names = _load_shoe_names_from_db()
 
-    if not list_file.exists():
-        print(f"Shoe list not found: {list_file}")
-        print(f"Create a file with one shoe name per line.")
-        sys.exit(1)
-
-    shoe_names = [
-        line.strip()
-        for line in list_file.read_text(encoding="utf-8").splitlines()
-        if line.strip() and not line.strip().startswith("#")
-    ]
+    # Fallback: use shoes.txt if no DB or no missing images
+    if not shoe_names:
+        list_file = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_LIST
+        if not list_file.exists():
+            print(f"No shoes need images and no shoe list found.")
+            sys.exit(0)
+        shoe_names = [
+            line.strip()
+            for line in list_file.read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.strip().startswith("#")
+        ]
 
     if not shoe_names:
-        print("No shoe names found in the file.")
-        sys.exit(1)
+        print("All shoes have images!")
+        sys.exit(0)
+
+    print(f"Found {len(shoe_names)} shoes needing images")
 
     app = QApplication(sys.argv)
     app.setStyle("Fusion")

@@ -507,6 +507,7 @@ class MainWindow(QMainWindow):
                 out_path.name,
                 "success",
             )
+            self._mark_has_image(out_path.stem)
         except Exception as e:
             self._set_status(f"Save error: {e}", RED)
             self._log_entry(
@@ -628,6 +629,26 @@ class MainWindow(QMainWindow):
             pass
 
     # ── Utilities ──
+
+    def _mark_has_image(self, filename_stem: str):
+        """Mark a shoe as having an image in shoebase.json."""
+        try:
+            db_path = REPO_DIR / "database" / "shoebase.json"
+            if not db_path.exists():
+                return
+            shoes = json.loads(db_path.read_text(encoding="utf-8"))
+            slug = filename_stem.lower()
+            for s in shoes:
+                shoe_slug = re.sub(r'[^a-z0-9]+', '-', s["full_name"].lower()).strip('-')
+                if shoe_slug == slug:
+                    s["has_image"] = True
+                    db_path.write_text(
+                        json.dumps(shoes, indent=2, ensure_ascii=False) + "\n",
+                        encoding="utf-8",
+                    )
+                    break
+        except Exception:
+            pass  # non-critical — don't block image processing
 
     def _open_output_folder(self):
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
