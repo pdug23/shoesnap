@@ -13,6 +13,7 @@ env/
 
 # Output and downloaded files
 output/
+fetched/
 downloaded_files/
 
 # IDE

@@ -1,0 +1,9 @@
+# ShoeSnap Image Fetcher — shoe list
+# One shoe per line. Lines starting with # are ignored.
+# Tip: include the colorway for better results, e.g. "Nike Vaporfly 3 volt"
+
+Nike Pegasus 41
+Hoka Clifton 9
+Brooks Ghost 16
+Asics Gel Nimbus 26
+New Balance Fresh Foam X 1080v13
