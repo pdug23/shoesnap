@@ -68,10 +68,20 @@ Six feel dimensions, each 1-5. Dimensions are INDEPENDENT.
 
 40 columns. See `scoring/framework/SCORING_HANDOFF.md` for full schema. Key enums:
 - Booleans: TRUE/FALSE
-- shoe_id: shoe_0181, shoe_0182, etc. (continue from last)
-- fit_volume: low/standard/high
-- support_type: neutral/stability
-- data_confidence: lab/estimated/placeholder
+- shoe_id: shoe_0186, shoe_0187, etc. (continue from last)
+- fit_volume: low / standard / high
+- toe_box: narrow / standard / roomy
+- width_options: "standard only" / "standard and wide"
+- support_type: neutral / stable_neutral / stability
+- heel_geometry: standard / aggressive_forefoot
+- surface: road / road/trail / trail
+- wet_grip: poor / average / good / excellent
+- release_status: "rare to find" / "available" / "not yet released"
+- retail_price_category: Budget / Core / Premium / Super-premium
+- data_confidence: lab / estimated / placeholder
+- plate_material: carbon / nylon / fiberglass / (empty if no plate)
+
+**Use ONLY these values. No exceptions.**
 
 ## Image Pipeline Spec
 

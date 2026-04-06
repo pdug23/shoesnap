@@ -47,7 +47,7 @@
     "data_confidence": "lab",
     "shoe_id": "shoe_0181",
     "alias_code": null,
-    "has_image": false
+    "has_image": true
   },
   {
     "shoe_id": "shoe_0159",
@@ -642,7 +642,7 @@
     "data_confidence": "lab",
     "shoe_id": "shoe_0182",
     "alias_code": null,
-    "has_image": false
+    "has_image": true
   },
   {
     "shoe_id": "shoe_0165",
@@ -4665,7 +4665,7 @@
     "data_confidence": "lab",
     "shoe_id": "shoe_0183",
     "alias_code": null,
-    "has_image": false
+    "has_image": true
   },
   {
     "shoe_id": "shoe_0096",
@@ -6696,7 +6696,7 @@
     "data_confidence": "lab",
     "shoe_id": "shoe_0184",
     "alias_code": null,
-    "has_image": false
+    "has_image": true
   },
   {
     "shoe_id": "shoe_0019",
@@ -8084,7 +8084,7 @@
     "data_confidence": "lab",
     "shoe_id": "shoe_0185",
     "alias_code": null,
-    "has_image": false
+    "has_image": true
   },
   {
     "shoe_id": "shoe_0132",
