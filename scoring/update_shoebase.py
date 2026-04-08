@@ -15,10 +15,21 @@ from pathlib import Path
 SCORING_DIR = Path(__file__).resolve().parent
 DATABASE_DIR = SCORING_DIR.parent / "database"
 IMAGES_DIR = SCORING_DIR.parent / "images"
+CINDA_DATA_DIR = SCORING_DIR.parent.parent / "cinda-0ab63566" / "src" / "data"
 
 SHOEBASE_PATH = DATABASE_DIR / "shoebase.json"
 CHANGELOG_PATH = DATABASE_DIR / "changelog.md"
 SHOES_TXT = IMAGES_DIR / "shoes.txt"
+
+
+def sync_to_cinda(content: str):
+    """Copy shoebase.json to the Cinda repo if it exists."""
+    cinda_path = CINDA_DATA_DIR / "shoebase.json"
+    if CINDA_DATA_DIR.exists():
+        cinda_path.write_text(content, encoding="utf-8")
+        print(f"  Synced to Cinda: {cinda_path}")
+    else:
+        print(f"  Warning: Cinda data dir not found ({CINDA_DATA_DIR}), skipping sync")
 
 
 def load_shoebase() -> list:
@@ -28,10 +39,9 @@ def load_shoebase() -> list:
 
 
 def save_shoebase(data: list):
-    SHOEBASE_PATH.write_text(
-        json.dumps(data, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
-    )
+    content = json.dumps(data, indent=2, ensure_ascii=False) + "\n"
+    SHOEBASE_PATH.write_text(content, encoding="utf-8")
+    sync_to_cinda(content)
 
 
 def next_shoe_id(shoebase: list) -> int:
