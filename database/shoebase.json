@@ -95,8 +95,8 @@
       "lacing:can be tricky to dial in"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 33,
     "has_image": true
   },
   {
@@ -144,8 +144,8 @@
       "fit:snug toe box on longer races"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 39,
+    "forefoot_stack_mm": 33,
     "has_image": true
   },
   {
@@ -194,8 +194,8 @@
       "padding:thin tongue and heel padding"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 37,
+    "forefoot_stack_mm": 30,
     "has_image": true
   },
   {
@@ -243,8 +243,8 @@
       "use_case:feels harsh for daily mileage"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 36,
+    "forefoot_stack_mm": 30,
     "has_image": true
   },
   {
@@ -292,8 +292,8 @@
       "use_case:not forgiving for high-mileage training"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 39.2,
-    "forefoot_stack_mm": 31.1,
+    "heel_stack_mm": 39,
+    "forefoot_stack_mm": 31,
     "has_image": true
   },
   {
@@ -341,8 +341,8 @@
       "use_case:too extreme for most racing scenarios"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 50,
+    "forefoot_stack_mm": 43,
     "has_image": true
   },
   {
@@ -390,8 +390,8 @@
       "use_case:not ideal for recovery days"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 35,
+    "forefoot_stack_mm": 26,
     "has_image": true
   },
   {
@@ -440,8 +440,8 @@
       "range:low stack limits usefulness beyond half marathon"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 30.6,
-    "forefoot_stack_mm": 23.7,
+    "heel_stack_mm": 31,
+    "forefoot_stack_mm": 24,
     "has_image": true
   },
   {
@@ -490,8 +490,8 @@
       "stability:narrow heel platform limits rearfoot support"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 33.0,
-    "forefoot_stack_mm": 24.9,
+    "heel_stack_mm": 33,
+    "forefoot_stack_mm": 25,
     "has_image": true
   },
   {
@@ -540,8 +540,8 @@
       "rocker:late-stage forefoot rocker may feel awkward for some runners"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 44.6,
-    "forefoot_stack_mm": 38.1,
+    "heel_stack_mm": 45,
+    "forefoot_stack_mm": 38,
     "has_image": true
   },
   {
@@ -590,8 +590,8 @@
       "tongue:still not gusseted"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 33.5,
-    "forefoot_stack_mm": 24.0,
+    "heel_stack_mm": 34,
+    "forefoot_stack_mm": 24,
     "has_image": true
   },
   {
@@ -690,8 +690,8 @@
       "identity:more lifestyle sneaker than performance running shoe"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 31,
+    "forefoot_stack_mm": 21,
     "has_image": true
   },
   {
@@ -740,8 +740,8 @@
       "sizing:runs half a size small"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 30,
+    "forefoot_stack_mm": 20,
     "has_image": true
   },
   {
@@ -789,8 +789,8 @@
       "ride:firm feel at slower paces"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 32,
+    "forefoot_stack_mm": 28,
     "has_image": true
   },
   {
@@ -838,8 +838,8 @@
       "stability:less secure on technical descents"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 25,
+    "forefoot_stack_mm": 25,
     "has_image": true
   },
   {
@@ -888,8 +888,8 @@
       "sizing:runs slightly small"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 30.8,
-    "forefoot_stack_mm": 30.5,
+    "heel_stack_mm": 31,
+    "forefoot_stack_mm": 30,
     "has_image": true
   },
   {
@@ -937,8 +937,8 @@
       "weight:bulky feel on climbs"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 35,
+    "forefoot_stack_mm": 35,
     "has_image": true
   },
   {
@@ -987,8 +987,8 @@
       "tongue:non-gusseted"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 27.6,
-    "forefoot_stack_mm": 27.7,
+    "heel_stack_mm": 28,
+    "forefoot_stack_mm": 28,
     "has_image": true
   },
   {
@@ -1036,8 +1036,8 @@
       "use_case:limited beyond easy runs"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 31,
+    "forefoot_stack_mm": 23,
     "has_image": true
   },
   {
@@ -1086,8 +1086,8 @@
       "cold:stiffens noticeably in freezing conditions"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 30,
     "has_image": true
   },
   {
@@ -1135,8 +1135,8 @@
       "weight:heavier than comparable daily trainers"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 30,
     "has_image": true
   },
   {
@@ -1185,8 +1185,8 @@
       "durability:heel padding durability is very poor despite premium price"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 30,
     "has_image": true
   },
   {
@@ -1235,8 +1235,8 @@
       "weight:feels clunky"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 30,
     "has_image": true
   },
   {
@@ -1284,8 +1284,8 @@
       "ride:firm for runners expecting plushness"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 39.9,
-    "forefoot_stack_mm": 30.6,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 31,
     "has_image": true
   },
   {
@@ -1334,8 +1334,8 @@
       "breathability:lacklustre ventilation"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 30,
     "has_image": true
   },
   {
@@ -1384,8 +1384,8 @@
       "fit:low toebox height may feel restrictive"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 42,
+    "forefoot_stack_mm": 34,
     "has_image": true
   },
   {
@@ -1433,8 +1433,8 @@
       "ride:overly soft for runners wanting ground feel"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 44,
+    "forefoot_stack_mm": 36,
     "has_image": true
   },
   {
@@ -1482,8 +1482,8 @@
       "ride:overly soft for runners wanting control"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 44,
+    "forefoot_stack_mm": 36,
     "has_image": true
   },
   {
@@ -1532,8 +1532,8 @@
       "fit:low toebox height may feel restrictive"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 42.1,
-    "forefoot_stack_mm": 31.1,
+    "heel_stack_mm": 42,
+    "forefoot_stack_mm": 31,
     "has_image": true
   },
   {
@@ -1582,8 +1582,8 @@
       "ride:still lacks a truly energetic feel despite foam upgrade"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 36.9,
-    "forefoot_stack_mm": 28.2,
+    "heel_stack_mm": 37,
+    "forefoot_stack_mm": 28,
     "has_image": true
   },
   {
@@ -1632,8 +1632,8 @@
       "tongue:insufficiently padded at only 3.3mm"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 36,
+    "forefoot_stack_mm": 28,
     "has_image": true
   },
   {
@@ -1682,8 +1682,8 @@
       "durability:toebox durability is poor despite strong outsole"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 35.3,
-    "forefoot_stack_mm": 26.6,
+    "heel_stack_mm": 35,
+    "forefoot_stack_mm": 27,
     "has_image": true
   },
   {
@@ -1731,8 +1731,8 @@
       "ride:too bouncy for runners wanting ground feel"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 45.1,
-    "forefoot_stack_mm": 35.2,
+    "heel_stack_mm": 45,
+    "forefoot_stack_mm": 35,
     "has_image": true
   },
   {
@@ -1780,8 +1780,8 @@
       "stability:unstable at slower technical paces"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 44,
+    "forefoot_stack_mm": 39,
     "has_image": true
   },
   {
@@ -1829,8 +1829,8 @@
       "ride:firm for runners expecting softness"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 34,
     "has_image": true
   },
   {
@@ -1879,8 +1879,8 @@
       "fit:extremely narrow heel platform"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 34,
     "has_image": true
   },
   {
@@ -1928,8 +1928,8 @@
       "stability:less controlled if form deteriorates"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 34,
     "has_image": true
   },
   {
@@ -1978,8 +1978,8 @@
       "sizing:runs half a size small — size up recommended"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 32.8,
-    "forefoot_stack_mm": 26.9,
+    "heel_stack_mm": 33,
+    "forefoot_stack_mm": 27,
     "has_image": true
   },
   {
@@ -2028,8 +2028,8 @@
       "breathability:not ideal for summer"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 42,
+    "forefoot_stack_mm": 34,
     "has_image": true
   },
   {
@@ -2077,8 +2077,8 @@
       "ride:too bouncy for runners wanting control"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 42,
+    "forefoot_stack_mm": 34,
     "has_image": true
   },
   {
@@ -2127,8 +2127,8 @@
       "branding:ASICS only lists top foam, hiding the inferior base layer"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 45.4,
-    "forefoot_stack_mm": 36.4,
+    "heel_stack_mm": 45,
+    "forefoot_stack_mm": 36,
     "has_image": true
   },
   {
@@ -2176,8 +2176,8 @@
       "stability:can feel unstable at slow paces"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 45,
+    "forefoot_stack_mm": 37,
     "has_image": true
   },
   {
@@ -2226,8 +2226,8 @@
       "price:expensive at £200"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 45.8,
-    "forefoot_stack_mm": 37.7,
+    "heel_stack_mm": 46,
+    "forefoot_stack_mm": 38,
     "has_image": true
   },
   {
@@ -2276,8 +2276,8 @@
       "outsole:notorious stone-trapping outsole design"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 46,
+    "forefoot_stack_mm": 38,
     "has_image": true
   },
   {
@@ -2326,8 +2326,8 @@
       "drop:steep drop limits forefoot striker suitability"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 36,
+    "forefoot_stack_mm": 24,
     "has_image": true
   },
   {
@@ -2376,8 +2376,8 @@
       "fit:toebox height is slightly low"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 39.0,
-    "forefoot_stack_mm": 25.5,
+    "heel_stack_mm": 39,
+    "forefoot_stack_mm": 26,
     "has_image": true
   },
   {
@@ -2426,8 +2426,8 @@
       "drop:extreme drop limits forefoot striker suitability"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 36,
+    "forefoot_stack_mm": 24,
     "has_image": true
   },
   {
@@ -2476,8 +2476,8 @@
       "drop:extreme drop not suitable for forefoot strikers"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 35,
+    "forefoot_stack_mm": 23,
     "has_image": true
   },
   {
@@ -2526,8 +2526,8 @@
       "tongue:not gusseted despite premium positioning"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 36,
+    "forefoot_stack_mm": 24,
     "has_image": true
   },
   {
@@ -2575,8 +2575,8 @@
       "weight:heavier than expected for a neutral daily trainer"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 36.2,
-    "forefoot_stack_mm": 25.8,
+    "heel_stack_mm": 36,
+    "forefoot_stack_mm": 26,
     "has_image": true
   },
   {
@@ -2624,8 +2624,8 @@
       "ride:muted transition at faster paces"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 39,
+    "forefoot_stack_mm": 33,
     "has_image": true
   },
   {
@@ -2674,8 +2674,8 @@
       "fit:narrow toebox"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 28,
     "has_image": true
   },
   {
@@ -2723,8 +2723,8 @@
       "weight:heavier than expected for a daily trainer"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 37.8,
-    "forefoot_stack_mm": 27.7,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 28,
     "has_image": true
   },
   {
@@ -2773,8 +2773,8 @@
       "tongue:non-gusseted despite premium positioning"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 37.8,
-    "forefoot_stack_mm": 27.7,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 28,
     "has_image": true
   },
   {
@@ -2822,8 +2822,8 @@
       "ride:muted feel despite high stack"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 47,
+    "forefoot_stack_mm": 41,
     "has_image": true
   },
   {
@@ -2872,8 +2872,8 @@
       "price:steep given Brooks' unimpressive racing history"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 37.6,
-    "forefoot_stack_mm": 26.4,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 26,
     "has_image": true
   },
   {
@@ -2922,8 +2922,8 @@
       "fit:narrow throughout — snug fit reported"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 33,
+    "forefoot_stack_mm": 26,
     "has_image": true
   },
   {
@@ -2972,8 +2972,8 @@
       "bounce:energy return still trails the best super trainers"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 45.6,
-    "forefoot_stack_mm": 35.0,
+    "heel_stack_mm": 46,
+    "forefoot_stack_mm": 35,
     "has_image": true
   },
   {
@@ -3022,8 +3022,8 @@
       "sizing:runs slightly small"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 33.5,
-    "forefoot_stack_mm": 24.0,
+    "heel_stack_mm": 34,
+    "forefoot_stack_mm": 24,
     "has_image": true
   },
   {
@@ -3072,8 +3072,8 @@
       "brand:no established Western retail or support infrastructure"
     ],
     "data_confidence": "estimated",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 41,
+    "forefoot_stack_mm": 34,
     "has_image": true
   },
   {
@@ -3122,8 +3122,8 @@
       "grip:borderline for wet conditions"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 34,
+    "forefoot_stack_mm": 29,
     "has_image": true
   },
   {
@@ -3171,8 +3171,8 @@
       "fit:narrow midfoot for high-volume feet"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 39,
+    "forefoot_stack_mm": 31,
     "has_image": true
   },
   {
@@ -3221,8 +3221,8 @@
       "drop:low 4mm drop may aggravate Achilles for higher-drop converts"
     ],
     "data_confidence": "estimated",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 33,
+    "forefoot_stack_mm": 29,
     "has_image": true
   },
   {
@@ -3271,8 +3271,8 @@
       "cold:firms up dramatically in freezing conditions"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 39,
+    "forefoot_stack_mm": 35,
     "has_image": true
   },
   {
@@ -3320,8 +3320,8 @@
       "ride:feels flat at faster paces"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 43,
+    "forefoot_stack_mm": 38,
     "has_image": true
   },
   {
@@ -3369,8 +3369,8 @@
       "use_case:road-focused outsole struggles on steep trails"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 42,
+    "forefoot_stack_mm": 34,
     "has_image": true
   },
   {
@@ -3419,8 +3419,8 @@
       "cold:foam firms up significantly in cold conditions"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 38.8,
-    "forefoot_stack_mm": 28.1,
+    "heel_stack_mm": 39,
+    "forefoot_stack_mm": 28,
     "has_image": true
   },
   {
@@ -3469,8 +3469,8 @@
       "durability:poor across toebox and heel padding — pure race disposable"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 44.5,
-    "forefoot_stack_mm": 31.1,
+    "heel_stack_mm": 44,
+    "forefoot_stack_mm": 31,
     "has_image": true
   },
   {
@@ -3518,8 +3518,8 @@
       "ride:lacks pop for uptempo running"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 42,
+    "forefoot_stack_mm": 34,
     "has_image": true
   },
   {
@@ -3568,8 +3568,8 @@
       "data:limited lab data — no softness or energy return measurements available"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 29,
+    "forefoot_stack_mm": 24,
     "has_image": true
   },
   {
@@ -3618,8 +3618,8 @@
       "fit:narrow despite wide option available"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 32,
+    "forefoot_stack_mm": 27,
     "has_image": true
   },
   {
@@ -3668,8 +3668,8 @@
       "wet:exposed foam outsole is dangerous on wet surfaces"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 29,
+    "forefoot_stack_mm": 24,
     "has_image": true
   },
   {
@@ -3717,8 +3717,8 @@
       "ride:less stable when fatigued"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 37,
+    "forefoot_stack_mm": 32,
     "has_image": true
   },
   {
@@ -3767,8 +3767,8 @@
       "drop:measured drop significantly higher than brand claims"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 46,
+    "forefoot_stack_mm": 41,
     "has_image": true
   },
   {
@@ -3816,8 +3816,8 @@
       "stability:less confidence on tight turns"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 43,
+    "forefoot_stack_mm": 33,
     "has_image": true
   },
   {
@@ -3866,8 +3866,8 @@
       "sizing:runs half a size small — size up recommended"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 37.7,
-    "forefoot_stack_mm": 31.1,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 31,
     "has_image": true
   },
   {
@@ -3916,8 +3916,8 @@
       "rocker:aggressive forward roll may feel unusual for some runners"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 39.6,
-    "forefoot_stack_mm": 29.6,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 30,
     "has_image": true
   },
   {
@@ -3966,8 +3966,8 @@
       "fit:extremely narrow toebox"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 39.3,
-    "forefoot_stack_mm": 30.6,
+    "heel_stack_mm": 39,
+    "forefoot_stack_mm": 31,
     "has_image": true
   },
   {
@@ -4016,8 +4016,8 @@
       "stiffness:too stiff for anything but running"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 46.3,
-    "forefoot_stack_mm": 37.1,
+    "heel_stack_mm": 46,
+    "forefoot_stack_mm": 37,
     "has_image": true
   },
   {
@@ -4066,8 +4066,8 @@
       "fit:not for wide feet despite platform width"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 33,
+    "forefoot_stack_mm": 29,
     "has_image": true
   },
   {
@@ -4115,8 +4115,8 @@
       "ride:firm platform on long descents"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 32.1,
-    "forefoot_stack_mm": 27.2,
+    "heel_stack_mm": 32,
+    "forefoot_stack_mm": 27,
     "has_image": true
   },
   {
@@ -4165,8 +4165,8 @@
       "weight:heavier than predecessor despite premium materials"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 37.8,
-    "forefoot_stack_mm": 30.9,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 31,
     "has_image": true
   },
   {
@@ -4215,8 +4215,8 @@
       "fit:narrow toebox limits wide feet"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 29.5,
-    "forefoot_stack_mm": 22.4,
+    "heel_stack_mm": 30,
+    "forefoot_stack_mm": 22,
     "has_image": true
   },
   {
@@ -4265,8 +4265,8 @@
       "fit:runs slightly small — size up recommended"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 30.1,
-    "forefoot_stack_mm": 24.1,
+    "heel_stack_mm": 30,
+    "forefoot_stack_mm": 24,
     "has_image": true
   },
   {
@@ -4315,8 +4315,8 @@
       "weight:heavy for a super shoe"
     ],
     "data_confidence": "estimated",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 41,
+    "forefoot_stack_mm": 35,
     "has_image": true
   },
   {
@@ -4365,8 +4365,8 @@
       "sizing:inconsistent sizing across production runs"
     ],
     "data_confidence": "estimated",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 47,
+    "forefoot_stack_mm": 42,
     "has_image": true
   },
   {
@@ -4415,8 +4415,8 @@
       "noise:loud midsole on footstrike"
     ],
     "data_confidence": "estimated",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 39,
+    "forefoot_stack_mm": 34,
     "has_image": true
   },
   {
@@ -4464,8 +4464,8 @@
       "ride:less controlled when fatigued"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 44,
+    "forefoot_stack_mm": 36,
     "has_image": true
   },
   {
@@ -4514,8 +4514,8 @@
       "durability:poor across toebox and heel padding"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 39.9,
-    "forefoot_stack_mm": 34.9,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 35,
     "has_image": true
   },
   {
@@ -4563,8 +4563,8 @@
       "ride:stiff forefoot limits natural flex"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 34,
     "has_image": true
   },
   {
@@ -4613,8 +4613,8 @@
       "ride:foam still lacks energy and bounce despite upgrade"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 38.0,
-    "forefoot_stack_mm": 25.1,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 25,
     "has_image": true
   },
   {
@@ -4640,8 +4640,8 @@
     "has_plate": true,
     "plate_tech_name": "Wave Plate",
     "plate_material": "nylon",
-    "heel_stack_mm": 38.5,
-    "forefoot_stack_mm": 28.5,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 28,
     "fit_volume": "standard",
     "toe_box": "standard",
     "width_options": "standard and wide",
@@ -4713,8 +4713,8 @@
       "durability:heel padding scored poorly"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 40.0,
-    "forefoot_stack_mm": 32.5,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 32,
     "has_image": true
   },
   {
@@ -4762,8 +4762,8 @@
       "ride:awkward if cadence drops"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 36,
     "has_image": true
   },
   {
@@ -4812,8 +4812,8 @@
       "price:expensive with inconsistent pricing across markets"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 37.0,
-    "forefoot_stack_mm": 30.6,
+    "heel_stack_mm": 37,
+    "forefoot_stack_mm": 31,
     "has_image": true
   },
   {
@@ -4862,8 +4862,8 @@
       "foam:Fresh Foam X not the newer Infinion — older technology"
     ],
     "data_confidence": "estimated",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 30,
     "has_image": true
   },
   {
@@ -4911,8 +4911,8 @@
       "use_case:lacks versatility beyond easy mileage"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 35,
+    "forefoot_stack_mm": 28,
     "has_image": true
   },
   {
@@ -4961,8 +4961,8 @@
       "cold:firms up more than average in cold weather"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 34.1,
-    "forefoot_stack_mm": 28.5,
+    "heel_stack_mm": 34,
+    "forefoot_stack_mm": 28,
     "has_image": true
   },
   {
@@ -5010,8 +5010,8 @@
       "stability:can feel unstable late in runs"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 32,
     "has_image": true
   },
   {
@@ -5060,8 +5060,8 @@
       "weight:heavier than expected for its category"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 36.8,
-    "forefoot_stack_mm": 27.5,
+    "heel_stack_mm": 37,
+    "forefoot_stack_mm": 28,
     "has_image": true
   },
   {
@@ -5110,8 +5110,8 @@
       "durability:thin outsole rubber coverage raises concerns"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 39.7,
-    "forefoot_stack_mm": 35.4,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 35,
     "has_image": true
   },
   {
@@ -5159,8 +5159,8 @@
       "ride:soft midsole reduces precision on rocky ground"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 33,
+    "forefoot_stack_mm": 29,
     "has_image": true
   },
   {
@@ -5208,8 +5208,8 @@
       "weight:feels cumbersome over distance"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 44,
+    "forefoot_stack_mm": 40,
     "has_image": true
   },
   {
@@ -5258,8 +5258,8 @@
       "cold:firms up badly — a known FuelCell weakness"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 30,
+    "forefoot_stack_mm": 24,
     "has_image": true
   },
   {
@@ -5307,8 +5307,8 @@
       "stability:less stable when fatigued"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 35,
+    "forefoot_stack_mm": 29,
     "has_image": true
   },
   {
@@ -5356,8 +5356,8 @@
       "stability:soft platform feels wobbly when fatigued"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 32,
     "has_image": true
   },
   {
@@ -5406,8 +5406,8 @@
       "fit:runs small and narrow"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 32,
     "has_image": true
   },
   {
@@ -5455,8 +5455,8 @@
       "fit:narrow midfoot for wider feet"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 32,
     "has_image": true
   },
   {
@@ -5505,8 +5505,8 @@
       "versatility:not for daily training — feels clunky at slower paces"
     ],
     "data_confidence": "estimated",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 39,
+    "forefoot_stack_mm": 35,
     "has_image": true
   },
   {
@@ -5555,8 +5555,8 @@
       "wet:explicitly not for wet surfaces"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 36,
+    "forefoot_stack_mm": 24,
     "has_image": true
   },
   {
@@ -5604,8 +5604,8 @@
       "ride:too soft for controlled pacing"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 31,
     "has_image": true
   },
   {
@@ -5654,8 +5654,8 @@
       "stability:narrow heel with low torsional rigidity"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 33,
+    "forefoot_stack_mm": 23,
     "has_image": true
   },
   {
@@ -5703,8 +5703,8 @@
       "ride:firm feel for easy runs"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 33.6,
-    "forefoot_stack_mm": 22.2,
+    "heel_stack_mm": 34,
+    "forefoot_stack_mm": 22,
     "has_image": true
   },
   {
@@ -5753,8 +5753,8 @@
       "tongue:non-gusseted despite premium price"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 33.0,
-    "forefoot_stack_mm": 23.6,
+    "heel_stack_mm": 33,
+    "forefoot_stack_mm": 24,
     "has_image": true
   },
   {
@@ -5802,8 +5802,8 @@
       "ride:firm forefoot reduces comfort on long runs"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 45,
+    "forefoot_stack_mm": 35,
     "has_image": true
   },
   {
@@ -5851,8 +5851,8 @@
       "stability:platform feels unstable on technical terrain"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 37,
+    "forefoot_stack_mm": 28,
     "has_image": true
   },
   {
@@ -5900,8 +5900,8 @@
       "ride:harsh feel over longer distances"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 33,
+    "forefoot_stack_mm": 23,
     "has_image": true
   },
   {
@@ -5949,8 +5949,8 @@
       "durability:outsole wears quickly"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 27,
+    "forefoot_stack_mm": 23,
     "has_image": true
   },
   {
@@ -5999,8 +5999,8 @@
       "grip:below-average wet traction"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 36.1,
-    "forefoot_stack_mm": 26.0,
+    "heel_stack_mm": 36,
+    "forefoot_stack_mm": 26,
     "has_image": true
   },
   {
@@ -6049,8 +6049,8 @@
       "tongue:non-gusseted despite premium price"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 40.9,
-    "forefoot_stack_mm": 29.7,
+    "heel_stack_mm": 41,
+    "forefoot_stack_mm": 30,
     "has_image": true
   },
   {
@@ -6098,8 +6098,8 @@
       "stability:less confidence on sharp corners"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 34.1,
-    "forefoot_stack_mm": 25.5,
+    "heel_stack_mm": 34,
+    "forefoot_stack_mm": 26,
     "has_image": true
   },
   {
@@ -6148,8 +6148,8 @@
       "versatility:pure race tool — not for daily training"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 39,
+    "forefoot_stack_mm": 31,
     "has_image": true
   },
   {
@@ -6198,8 +6198,8 @@
       "forefoot:forefoot impact protection flagged as insufficient"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 32,
     "has_image": true
   },
   {
@@ -6248,8 +6248,8 @@
       "ride:described as a durable cruiser rather than an exciting runner"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 39,
+    "forefoot_stack_mm": 29,
     "has_image": true
   },
   {
@@ -6297,8 +6297,8 @@
       "ride:lacks energy return for uptempo work"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 45,
+    "forefoot_stack_mm": 35,
     "has_image": true
   },
   {
@@ -6346,8 +6346,8 @@
       "use_case:overbuilt for easy mileage only"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 45,
+    "forefoot_stack_mm": 35,
     "has_image": true
   },
   {
@@ -6395,8 +6395,8 @@
       "use_case:too soft for faster sessions"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 55,
+    "forefoot_stack_mm": 45,
     "has_image": true
   },
   {
@@ -6445,8 +6445,8 @@
       "breathability:poor ventilation"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 41,
+    "forefoot_stack_mm": 33,
     "has_image": true
   },
   {
@@ -6494,8 +6494,8 @@
       "weight:heavier than plated alternatives"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 32,
     "has_image": true
   },
   {
@@ -6544,8 +6544,8 @@
       "heel:potential heel slippage reported"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 38.1,
-    "forefoot_stack_mm": 34.9,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 35,
     "has_image": true
   },
   {
@@ -6594,8 +6594,8 @@
       "breathability:dense upper limits airflow"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 32.8,
-    "forefoot_stack_mm": 28.7,
+    "heel_stack_mm": 33,
+    "forefoot_stack_mm": 29,
     "has_image": true
   },
   {
@@ -6643,8 +6643,8 @@
       "traction:inconsistent grip on wet roads"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 35,
+    "forefoot_stack_mm": 29,
     "has_image": true
   },
   {
@@ -6743,8 +6743,8 @@
       "stability:can feel awkward on camber"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 30,
+    "forefoot_stack_mm": 24,
     "has_image": true
   },
   {
@@ -6843,8 +6843,8 @@
       "durability:outsole durability is a concern"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 33.6,
-    "forefoot_stack_mm": 25.1,
+    "heel_stack_mm": 34,
+    "forefoot_stack_mm": 25,
     "has_image": true
   },
   {
@@ -6893,8 +6893,8 @@
       "grip:below-average wet traction"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 37.5,
-    "forefoot_stack_mm": 27.1,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 27,
     "has_image": true
   },
   {
@@ -6943,8 +6943,8 @@
       "breathability:limited airflow"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 37.3,
-    "forefoot_stack_mm": 29.4,
+    "heel_stack_mm": 37,
+    "forefoot_stack_mm": 29,
     "has_image": true
   },
   {
@@ -6993,8 +6993,8 @@
       "price:increased from previous version"
     ],
     "data_confidence": "estimated",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 30,
     "has_image": true
   },
   {
@@ -7042,8 +7042,8 @@
       "ride:firm feel at easy paces"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 32,
     "has_image": true
   },
   {
@@ -7092,8 +7092,8 @@
       "price:premium positioning"
     ],
     "data_confidence": "estimated",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 32,
     "has_image": true
   },
   {
@@ -7141,8 +7141,8 @@
       "fit:rigid upper limits adaptability"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 32,
     "has_image": true
   },
   {
@@ -7190,8 +7190,8 @@
       "fit:snug midfoot limits comfort"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 32,
     "has_image": true
   },
   {
@@ -7240,8 +7240,8 @@
       "drop:steep drop not ideal for forefoot strikers"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 36.1,
-    "forefoot_stack_mm": 26.1,
+    "heel_stack_mm": 36,
+    "forefoot_stack_mm": 26,
     "has_image": true
   },
   {
@@ -7290,8 +7290,8 @@
       "ride:very stiff underfoot feel"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 45.5,
-    "forefoot_stack_mm": 35.0,
+    "heel_stack_mm": 46,
+    "forefoot_stack_mm": 35,
     "has_image": true
   },
   {
@@ -7339,8 +7339,8 @@
       "ride:softness reduces stability when tired"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 47,
+    "forefoot_stack_mm": 39,
     "has_image": true
   },
   {
@@ -7388,8 +7388,8 @@
       "ride:lacks responsiveness for faster efforts"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 30,
     "has_image": true
   },
   {
@@ -7438,8 +7438,8 @@
       "drop:steep drop may not suit forefoot/midfoot strikers"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 36,
+    "forefoot_stack_mm": 26,
     "has_image": true
   },
   {
@@ -7487,8 +7487,8 @@
       "ride:firm forefoot at slower paces"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 36,
+    "forefoot_stack_mm": 26,
     "has_image": true
   },
   {
@@ -7537,8 +7537,8 @@
       "aesthetics:divisive neon-only colourways"
     ],
     "data_confidence": "estimated",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 42,
+    "forefoot_stack_mm": 34,
     "has_image": true
   },
   {
@@ -7586,8 +7586,8 @@
       "stability:less confidence on road camber"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 41,
+    "forefoot_stack_mm": 31,
     "has_image": true
   },
   {
@@ -7635,8 +7635,8 @@
       "ride:stiff transition on road"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 32,
     "has_image": true
   },
   {
@@ -7685,8 +7685,8 @@
       "identity:road shoe adapted for trail — may not excel at either"
     ],
     "data_confidence": "estimated",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 41,
+    "forefoot_stack_mm": 33,
     "has_image": true
   },
   {
@@ -7735,8 +7735,8 @@
       "fit:narrow throughout — not for wide feet"
     ],
     "data_confidence": "estimated",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 35,
+    "forefoot_stack_mm": 25,
     "has_image": true
   },
   {
@@ -7784,8 +7784,8 @@
       "ride:firm feel on longer distances"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 32,
+    "forefoot_stack_mm": 22,
     "has_image": true
   },
   {
@@ -7834,8 +7834,8 @@
       "fit:narrower than average throughout — not for wide feet"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 30.6,
-    "forefoot_stack_mm": 23.4,
+    "heel_stack_mm": 31,
+    "forefoot_stack_mm": 23,
     "has_image": true
   },
   {
@@ -7884,8 +7884,8 @@
       "fun:described as not as fun as other super trainers"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 40.7,
-    "forefoot_stack_mm": 32.7,
+    "heel_stack_mm": 41,
+    "forefoot_stack_mm": 33,
     "has_image": true
   },
   {
@@ -7933,8 +7933,8 @@
       "fit:snug upper for high-volume feet"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 32,
     "has_image": true
   },
   {
@@ -7983,8 +7983,8 @@
       "sizing:runs slightly small"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 32,
     "has_image": true
   },
   {
@@ -8032,8 +8032,8 @@
       "ride:less forgiving at slower paces"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 32,
     "has_image": true
   },
   {
@@ -8059,8 +8059,8 @@
     "has_plate": true,
     "plate_tech_name": "Speedroll carbon plate",
     "plate_material": "carbon",
-    "heel_stack_mm": 39.5,
-    "forefoot_stack_mm": 31.5,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 32,
     "fit_volume": "standard",
     "toe_box": "narrow",
     "width_options": "standard only",
@@ -8132,8 +8132,8 @@
       "reflective:no reflective elements for low-light running"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 36,
+    "forefoot_stack_mm": 28,
     "has_image": true
   },
   {
@@ -8182,8 +8182,8 @@
       "tongue:minimal padding risks lace bite"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 30,
     "has_image": true
   },
   {
@@ -8231,8 +8231,8 @@
       "fit:narrow midfoot for wider feet"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 36,
+    "forefoot_stack_mm": 28,
     "has_image": true
   },
   {
@@ -8281,8 +8281,8 @@
       "foam:exposed midsole foam may wear faster in some areas"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 35,
+    "forefoot_stack_mm": 29,
     "has_image": true
   },
   {
@@ -8330,8 +8330,8 @@
       "fit:snug forefoot for wider feet"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 35,
+    "forefoot_stack_mm": 29,
     "has_image": true
   },
   {
@@ -8380,8 +8380,8 @@
       "fit:narrow toebox not for wide feet"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 28.0,
-    "forefoot_stack_mm": 23.5,
+    "heel_stack_mm": 28,
+    "forefoot_stack_mm": 24,
     "has_image": true
   },
   {
@@ -8429,8 +8429,8 @@
       "fit:narrow midfoot for high-volume feet"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 28,
+    "forefoot_stack_mm": 24,
     "has_image": true
   },
   {
@@ -8479,8 +8479,8 @@
       "fit:tapered toe shape may not suit all feet"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 35,
+    "forefoot_stack_mm": 27,
     "has_image": true
   },
   {
@@ -8528,8 +8528,8 @@
       "use_case:lacks excitement for workouts"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 35.0,
-    "forefoot_stack_mm": 26.6,
+    "heel_stack_mm": 35,
+    "forefoot_stack_mm": 27,
     "has_image": true
   },
   {
@@ -8578,8 +8578,8 @@
       "breathability:excellent — one of the most breathable shoes tested"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 38.7,
-    "forefoot_stack_mm": 30.2,
+    "heel_stack_mm": 39,
+    "forefoot_stack_mm": 30,
     "has_image": true
   },
   {
@@ -8628,8 +8628,8 @@
       "fit:narrow in the forefoot"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 36.8,
-    "forefoot_stack_mm": 26.7,
+    "heel_stack_mm": 37,
+    "forefoot_stack_mm": 27,
     "has_image": true
   },
   {
@@ -8678,8 +8678,8 @@
       "speed:not designed for faster efforts"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 39,
+    "forefoot_stack_mm": 29,
     "has_image": true
   },
   {
@@ -8728,8 +8728,8 @@
       "breathability:only average ventilation"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 37,
+    "forefoot_stack_mm": 27,
     "has_image": true
   },
   {
@@ -8777,8 +8777,8 @@
       "ride:softness reduces responsiveness"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 37,
+    "forefoot_stack_mm": 27,
     "has_image": true
   },
   {
@@ -8827,8 +8827,8 @@
       "durability:heel padding scored poorly"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 37.6,
-    "forefoot_stack_mm": 31.1,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 31,
     "has_image": true
   },
   {
@@ -8876,8 +8876,8 @@
       "durability:upper shows wear early"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 42,
+    "forefoot_stack_mm": 36,
     "has_image": true
   },
   {
@@ -8926,8 +8926,8 @@
       "rocker:aggressive rocker geometry may feel intrusive"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 35.5,
-    "forefoot_stack_mm": 27.1,
+    "heel_stack_mm": 36,
+    "forefoot_stack_mm": 27,
     "has_image": true
   },
   {
@@ -8975,8 +8975,8 @@
       "fit:narrow midfoot for wider feet"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 30,
+    "forefoot_stack_mm": 24,
     "has_image": true
   },
   {
@@ -9025,8 +9025,8 @@
       "speed:not designed for faster efforts"
     ],
     "data_confidence": "estimated",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 40,
+    "forefoot_stack_mm": 35,
     "has_image": true
   },
   {
@@ -9074,8 +9074,8 @@
       "use_case:overbuilt for shorter runs"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": null,
-    "forefoot_stack_mm": null,
+    "heel_stack_mm": 38,
+    "forefoot_stack_mm": 33,
     "has_image": true
   },
   {
@@ -9124,8 +9124,8 @@
       "durability:heel padding is very poor"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 34.6,
-    "forefoot_stack_mm": 27.6,
+    "heel_stack_mm": 35,
+    "forefoot_stack_mm": 28,
     "has_image": true
   },
   {
@@ -9174,8 +9174,8 @@
       "cold:firms up significantly in freezing conditions"
     ],
     "data_confidence": "lab",
-    "heel_stack_mm": 30.8,
-    "forefoot_stack_mm": 21.2,
+    "heel_stack_mm": 31,
+    "forefoot_stack_mm": 21,
     "has_image": true
   }
 ]
