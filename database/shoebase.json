@@ -47,7 +47,9 @@
     "data_confidence": "lab",
     "shoe_id": "shoe_0181",
     "alias_code": null,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0159",
@@ -97,7 +99,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 33,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0042",
@@ -146,7 +150,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 39,
     "forefoot_stack_mm": 33,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0160",
@@ -196,7 +202,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 37,
     "forefoot_stack_mm": 30,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0035",
@@ -245,7 +253,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 36,
     "forefoot_stack_mm": 30,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0012",
@@ -294,7 +304,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 39,
     "forefoot_stack_mm": 31,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0047",
@@ -343,7 +355,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 50,
     "forefoot_stack_mm": 43,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "half",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0026",
@@ -392,7 +406,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 35,
     "forefoot_stack_mm": 26,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0099",
@@ -442,7 +458,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 31,
     "forefoot_stack_mm": 24,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "5k",
+    "race_distance_max": "10k"
   },
   {
     "shoe_id": "shoe_0122",
@@ -492,7 +510,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 33,
     "forefoot_stack_mm": 25,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0141",
@@ -542,7 +562,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 45,
     "forefoot_stack_mm": 38,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0083",
@@ -592,7 +614,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 34,
     "forefoot_stack_mm": 24,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "brand": "adidas",
@@ -642,7 +666,9 @@
     "data_confidence": "lab",
     "shoe_id": "shoe_0182",
     "alias_code": null,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "5k",
+    "race_distance_max": "half"
   },
   {
     "shoe_id": "shoe_0165",
@@ -692,7 +718,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 31,
     "forefoot_stack_mm": 21,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0117",
@@ -742,7 +770,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 30,
     "forefoot_stack_mm": 20,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0033",
@@ -791,7 +821,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 32,
     "forefoot_stack_mm": 28,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0052",
@@ -840,7 +872,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 25,
     "forefoot_stack_mm": 25,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0152",
@@ -890,7 +924,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 31,
     "forefoot_stack_mm": 30,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0053",
@@ -939,7 +975,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 35,
     "forefoot_stack_mm": 35,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0157",
@@ -989,7 +1027,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 28,
     "forefoot_stack_mm": 28,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0067",
@@ -1038,7 +1078,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 31,
     "forefoot_stack_mm": 23,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0118",
@@ -1088,7 +1130,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 30,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0061",
@@ -1137,7 +1181,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 30,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0113",
@@ -1187,7 +1233,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 30,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0107",
@@ -1237,7 +1285,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 30,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0017",
@@ -1286,7 +1336,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 31,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0166",
@@ -1336,7 +1388,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 30,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0129",
@@ -1386,7 +1440,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 42,
     "forefoot_stack_mm": 34,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0013",
@@ -1435,7 +1491,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 44,
     "forefoot_stack_mm": 36,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0064",
@@ -1484,7 +1542,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 44,
     "forefoot_stack_mm": 36,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0147",
@@ -1534,7 +1594,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 42,
     "forefoot_stack_mm": 31,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0075",
@@ -1584,7 +1646,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 37,
     "forefoot_stack_mm": 28,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0130",
@@ -1634,7 +1698,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 36,
     "forefoot_stack_mm": 28,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0091",
@@ -1684,7 +1750,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 35,
     "forefoot_stack_mm": 27,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "5k",
+    "race_distance_max": "half"
   },
   {
     "shoe_id": "shoe_0048",
@@ -1733,7 +1801,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 45,
     "forefoot_stack_mm": 35,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0054",
@@ -1782,7 +1852,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 44,
     "forefoot_stack_mm": 39,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "half",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0046",
@@ -1831,7 +1903,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 34,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "5k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0162",
@@ -1881,7 +1955,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 34,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0072",
@@ -1930,7 +2006,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 34,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0090",
@@ -1980,7 +2058,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 33,
     "forefoot_stack_mm": 27,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0106",
@@ -2030,7 +2110,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 42,
     "forefoot_stack_mm": 34,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0006",
@@ -2079,7 +2161,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 42,
     "forefoot_stack_mm": 34,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0093",
@@ -2129,7 +2213,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 45,
     "forefoot_stack_mm": 36,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0014",
@@ -2178,7 +2264,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 45,
     "forefoot_stack_mm": 37,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0140",
@@ -2228,7 +2316,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 46,
     "forefoot_stack_mm": 38,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0131",
@@ -2278,7 +2368,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 46,
     "forefoot_stack_mm": 38,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0114",
@@ -2328,7 +2420,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 36,
     "forefoot_stack_mm": 24,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0074",
@@ -2378,7 +2472,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 39,
     "forefoot_stack_mm": 26,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0163",
@@ -2428,7 +2524,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 36,
     "forefoot_stack_mm": 24,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0135",
@@ -2478,7 +2576,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 35,
     "forefoot_stack_mm": 23,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0111",
@@ -2528,7 +2628,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 36,
     "forefoot_stack_mm": 24,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0032",
@@ -2577,7 +2679,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 36,
     "forefoot_stack_mm": 26,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0015",
@@ -2626,7 +2730,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 39,
     "forefoot_stack_mm": 33,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0108",
@@ -2676,7 +2782,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 28,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0022",
@@ -2725,7 +2833,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 28,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0155",
@@ -2775,7 +2885,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 28,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0007",
@@ -2824,7 +2936,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 47,
     "forefoot_stack_mm": 41,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0092",
@@ -2874,7 +2988,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 26,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0120",
@@ -2924,7 +3040,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 33,
     "forefoot_stack_mm": 26,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "half"
   },
   {
     "shoe_id": "shoe_0156",
@@ -2974,7 +3092,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 46,
     "forefoot_stack_mm": 35,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0149",
@@ -3024,7 +3144,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 34,
     "forefoot_stack_mm": 24,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0179",
@@ -3074,7 +3196,9 @@
     "data_confidence": "estimated",
     "heel_stack_mm": 41,
     "forefoot_stack_mm": 34,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0116",
@@ -3124,7 +3248,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 34,
     "forefoot_stack_mm": 29,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0058",
@@ -3173,7 +3299,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 39,
     "forefoot_stack_mm": 31,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0169",
@@ -3223,7 +3351,9 @@
     "data_confidence": "estimated",
     "heel_stack_mm": 33,
     "forefoot_stack_mm": 29,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0102",
@@ -3273,7 +3403,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 39,
     "forefoot_stack_mm": 35,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0001",
@@ -3322,7 +3454,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 43,
     "forefoot_stack_mm": 38,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0050",
@@ -3371,7 +3505,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 42,
     "forefoot_stack_mm": 34,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0078",
@@ -3421,7 +3557,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 39,
     "forefoot_stack_mm": 28,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0142",
@@ -3471,7 +3609,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 44,
     "forefoot_stack_mm": 31,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0002",
@@ -3520,7 +3660,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 42,
     "forefoot_stack_mm": 34,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0137",
@@ -3570,7 +3712,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 29,
     "forefoot_stack_mm": 24,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0100",
@@ -3620,7 +3764,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 32,
     "forefoot_stack_mm": 27,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0101",
@@ -3670,7 +3816,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 29,
     "forefoot_stack_mm": 24,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0036",
@@ -3719,7 +3867,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 37,
     "forefoot_stack_mm": 32,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0134",
@@ -3769,7 +3919,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 46,
     "forefoot_stack_mm": 41,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0039",
@@ -3818,7 +3970,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 43,
     "forefoot_stack_mm": 33,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0126",
@@ -3868,7 +4022,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 31,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0127",
@@ -3918,7 +4074,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 30,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0094",
@@ -3968,7 +4126,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 39,
     "forefoot_stack_mm": 31,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0095",
@@ -4018,7 +4178,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 46,
     "forefoot_stack_mm": 37,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "half",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0136",
@@ -4068,7 +4230,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 33,
     "forefoot_stack_mm": 29,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0060",
@@ -4117,7 +4281,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 32,
     "forefoot_stack_mm": 27,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0088",
@@ -4167,7 +4333,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 31,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0087",
@@ -4217,7 +4385,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 30,
     "forefoot_stack_mm": 22,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0125",
@@ -4267,7 +4437,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 30,
     "forefoot_stack_mm": 24,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0174",
@@ -4317,7 +4489,9 @@
     "data_confidence": "estimated",
     "heel_stack_mm": 41,
     "forefoot_stack_mm": 35,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0173",
@@ -4367,7 +4541,9 @@
     "data_confidence": "estimated",
     "heel_stack_mm": 47,
     "forefoot_stack_mm": 42,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0180",
@@ -4417,7 +4593,9 @@
     "data_confidence": "estimated",
     "heel_stack_mm": 39,
     "forefoot_stack_mm": 34,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "5k",
+    "race_distance_max": "half"
   },
   {
     "shoe_id": "shoe_0028",
@@ -4466,7 +4644,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 44,
     "forefoot_stack_mm": 36,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0146",
@@ -4516,7 +4696,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 35,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0027",
@@ -4565,7 +4747,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 34,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0084",
@@ -4615,7 +4799,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 25,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "brand": "Mizuno",
@@ -4665,7 +4851,9 @@
     "data_confidence": "lab",
     "shoe_id": "shoe_0183",
     "alias_code": null,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0096",
@@ -4715,7 +4903,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 32,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "5k",
+    "race_distance_max": "half"
   },
   {
     "shoe_id": "shoe_0065",
@@ -4764,7 +4954,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 36,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0097",
@@ -4814,7 +5006,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 37,
     "forefoot_stack_mm": 31,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0171",
@@ -4864,7 +5058,9 @@
     "data_confidence": "estimated",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 30,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0069",
@@ -4913,7 +5109,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 35,
     "forefoot_stack_mm": 28,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0098",
@@ -4963,7 +5161,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 34,
     "forefoot_stack_mm": 28,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0008",
@@ -5012,7 +5212,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 32,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0076",
@@ -5062,7 +5264,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 37,
     "forefoot_stack_mm": 28,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0154",
@@ -5112,7 +5316,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 35,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0051",
@@ -5161,7 +5367,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 33,
     "forefoot_stack_mm": 29,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0005",
@@ -5210,7 +5418,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 44,
     "forefoot_stack_mm": 40,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0110",
@@ -5260,7 +5470,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 30,
     "forefoot_stack_mm": 24,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0020",
@@ -5309,7 +5521,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 35,
     "forefoot_stack_mm": 29,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0044",
@@ -5358,7 +5572,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 32,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0104",
@@ -5408,7 +5624,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 32,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "half",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0040",
@@ -5457,7 +5675,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 32,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "half",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0168",
@@ -5507,7 +5727,9 @@
     "data_confidence": "estimated",
     "heel_stack_mm": 39,
     "forefoot_stack_mm": 35,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "half",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0164",
@@ -5557,7 +5779,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 36,
     "forefoot_stack_mm": 24,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0021",
@@ -5606,7 +5830,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 31,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0103",
@@ -5656,7 +5882,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 33,
     "forefoot_stack_mm": 23,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0009",
@@ -5705,7 +5933,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 34,
     "forefoot_stack_mm": 22,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0089",
@@ -5755,7 +5985,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 33,
     "forefoot_stack_mm": 24,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0011",
@@ -5804,7 +6036,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 45,
     "forefoot_stack_mm": 35,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0070",
@@ -5853,7 +6087,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 37,
     "forefoot_stack_mm": 28,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0068",
@@ -5902,7 +6138,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 33,
     "forefoot_stack_mm": 23,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0045",
@@ -5951,7 +6189,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 27,
     "forefoot_stack_mm": 23,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "5k",
+    "race_distance_max": "10k"
   },
   {
     "shoe_id": "shoe_0073",
@@ -6001,7 +6241,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 36,
     "forefoot_stack_mm": 26,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0145",
@@ -6051,7 +6293,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 41,
     "forefoot_stack_mm": 30,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0062",
@@ -6100,7 +6344,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 34,
     "forefoot_stack_mm": 26,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "5k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0158",
@@ -6150,7 +6396,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 39,
     "forefoot_stack_mm": 31,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0112",
@@ -6200,7 +6448,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 32,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0139",
@@ -6250,7 +6500,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 39,
     "forefoot_stack_mm": 29,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0010",
@@ -6299,7 +6551,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 45,
     "forefoot_stack_mm": 35,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0003",
@@ -6348,7 +6602,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 45,
     "forefoot_stack_mm": 35,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0004",
@@ -6397,7 +6653,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 55,
     "forefoot_stack_mm": 45,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0105",
@@ -6447,7 +6705,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 41,
     "forefoot_stack_mm": 33,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0041",
@@ -6496,7 +6756,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 32,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0081",
@@ -6546,7 +6808,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 35,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0079",
@@ -6596,7 +6860,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 33,
     "forefoot_stack_mm": 29,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "half"
   },
   {
     "shoe_id": "shoe_0018",
@@ -6645,7 +6911,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 35,
     "forefoot_stack_mm": 29,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "brand": "On",
@@ -6696,7 +6964,9 @@
     "data_confidence": "lab",
     "shoe_id": "shoe_0184",
     "alias_code": null,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0019",
@@ -6745,7 +7015,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 30,
     "forefoot_stack_mm": 24,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0172",
@@ -6795,7 +7067,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 37.0,
     "forefoot_stack_mm": 31.0,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0082",
@@ -6845,7 +7119,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 34,
     "forefoot_stack_mm": 25,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0077",
@@ -6895,7 +7171,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 27,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0080",
@@ -6945,7 +7223,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 37,
     "forefoot_stack_mm": 29,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0177",
@@ -6995,7 +7275,9 @@
     "data_confidence": "estimated",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 30,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0034",
@@ -7044,7 +7326,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 32,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0178",
@@ -7094,7 +7378,9 @@
     "data_confidence": "estimated",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 32,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0049",
@@ -7143,7 +7429,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 32,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "half",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0066",
@@ -7192,7 +7480,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 32,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0123",
@@ -7242,7 +7532,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 36,
     "forefoot_stack_mm": 26,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0143",
@@ -7292,7 +7584,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 46,
     "forefoot_stack_mm": 35,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0025",
@@ -7341,7 +7635,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 47,
     "forefoot_stack_mm": 39,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0029",
@@ -7390,7 +7686,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 30,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0121",
@@ -7440,7 +7738,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 36,
     "forefoot_stack_mm": 26,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0024",
@@ -7489,7 +7789,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 36,
     "forefoot_stack_mm": 26,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0148",
@@ -7539,7 +7841,9 @@
     "data_confidence": "estimated",
     "heel_stack_mm": 42,
     "forefoot_stack_mm": 34,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0030",
@@ -7588,7 +7892,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 41,
     "forefoot_stack_mm": 31,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0063",
@@ -7637,7 +7943,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 32,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0176",
@@ -7687,7 +7995,9 @@
     "data_confidence": "estimated",
     "heel_stack_mm": 41,
     "forefoot_stack_mm": 33,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0170",
@@ -7737,7 +8047,9 @@
     "data_confidence": "estimated",
     "heel_stack_mm": 35,
     "forefoot_stack_mm": 25,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0059",
@@ -7786,7 +8098,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 32,
     "forefoot_stack_mm": 22,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0128",
@@ -7836,7 +8150,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 31,
     "forefoot_stack_mm": 23,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0144",
@@ -7886,7 +8202,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 41,
     "forefoot_stack_mm": 33,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0038",
@@ -7935,7 +8253,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 32,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0161",
@@ -7985,7 +8305,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 32,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0043",
@@ -8034,7 +8356,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 32,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "brand": "Saucony",
@@ -8084,7 +8408,9 @@
     "data_confidence": "lab",
     "shoe_id": "shoe_0185",
     "alias_code": null,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0132",
@@ -8134,7 +8460,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 36,
     "forefoot_stack_mm": 28,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "5k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0109",
@@ -8184,7 +8512,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 30,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "5k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0037",
@@ -8233,7 +8563,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 36,
     "forefoot_stack_mm": 28,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "5k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0133",
@@ -8283,7 +8615,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 35,
     "forefoot_stack_mm": 29,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0057",
@@ -8332,7 +8666,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 35,
     "forefoot_stack_mm": 29,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0085",
@@ -8382,7 +8718,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 28,
     "forefoot_stack_mm": 24,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0071",
@@ -8431,7 +8769,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 28,
     "forefoot_stack_mm": 24,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0119",
@@ -8481,7 +8821,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 35,
     "forefoot_stack_mm": 27,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0023",
@@ -8530,7 +8872,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 35,
     "forefoot_stack_mm": 27,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0150",
@@ -8580,7 +8924,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 39,
     "forefoot_stack_mm": 30,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0167",
@@ -8630,7 +8976,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 37,
     "forefoot_stack_mm": 27,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0138",
@@ -8680,7 +9028,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 39,
     "forefoot_stack_mm": 29,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0115",
@@ -8730,7 +9080,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 37,
     "forefoot_stack_mm": 27,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0056",
@@ -8779,7 +9131,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 37,
     "forefoot_stack_mm": 27,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0086",
@@ -8829,7 +9183,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 31,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "half",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0016",
@@ -8878,7 +9234,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 42,
     "forefoot_stack_mm": 36,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0151",
@@ -8928,7 +9286,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 36,
     "forefoot_stack_mm": 27,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": "10k",
+    "race_distance_max": "marathon"
   },
   {
     "shoe_id": "shoe_0055",
@@ -8977,7 +9337,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 30,
     "forefoot_stack_mm": 24,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0175",
@@ -9027,7 +9389,9 @@
     "data_confidence": "estimated",
     "heel_stack_mm": 40,
     "forefoot_stack_mm": 35,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0031",
@@ -9076,7 +9440,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 38,
     "forefoot_stack_mm": 33,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0153",
@@ -9126,7 +9492,9 @@
     "data_confidence": "lab",
     "heel_stack_mm": 35,
     "forefoot_stack_mm": 28,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   },
   {
     "shoe_id": "shoe_0124",
@@ -9176,6 +9544,8 @@
     "data_confidence": "lab",
     "heel_stack_mm": 31,
     "forefoot_stack_mm": 21,
-    "has_image": true
+    "has_image": true,
+    "race_distance_min": null,
+    "race_distance_max": null
   }
 ]

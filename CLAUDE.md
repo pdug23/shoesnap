@@ -71,6 +71,12 @@ These shoebase.json fields drive badge logic in Cinda's shoe cards:
 
 When scoring new shoes, accuracy on `heel_stack_mm`, `ground_feel_1to5`, `cushion_softness_1to5`, and `has_plate` directly affects which badges appear.
 
+**Race distance suitability:** Two fields on race shoes and plated workout shoes:
+- `race_distance_min`: shortest suitable distance — `"5k"` | `"10k"` | `"half"` | `"marathon"`
+- `race_distance_max`: longest suitable distance — same values
+- Leave both `null` for non-race, non-plated shoes
+- Cinda defaults to half marathon minimum when recommending race shoes. Shoes with `race_distance_max` below "half" (e.g. Streakfly 2 at "10k") won't appear unless user specifically asks for short-distance racers.
+
 ## Data Tiers
 
 1. **RunRepeat** (lab) — Gold standard. Cut shoes in half.
