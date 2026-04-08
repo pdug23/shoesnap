@@ -58,6 +58,19 @@ Six feel dimensions, each 1-5. Dimensions are INDEPENDENT.
 4. Text columns describe FEEL, never lab measurements
 5. data_confidence: "lab" (RunRepeat), "estimated" (editorial), "placeholder" (brand specs only)
 
+## Badge-Relevant Fields
+
+These shoebase.json fields drive badge logic in Cinda's shoe cards:
+
+**Super trainer:** `is_super_trainer=true` — must also have `is_daily_trainer`, `is_recovery_shoe`, `is_workout_shoe` all true. Covers recovery through intervals. Currently 21 shoes.
+
+**MAX cushion:** Determined by stack height + feel, NOT a boolean field. Cinda derives it:
+- Path A: `heel_stack_mm >= 43` AND `ground_feel_1to5 <= 2` AND `has_plate = false`
+- Path B: `cushion_softness_1to5 = 5` AND `heel_stack_mm >= 40` AND `has_plate = false`
+- Excluded: pure racers, plated shoes. Currently 11 shoes qualify.
+
+When scoring new shoes, accuracy on `heel_stack_mm`, `ground_feel_1to5`, `cushion_softness_1to5`, and `has_plate` directly affects which badges appear.
+
 ## Data Tiers
 
 1. **RunRepeat** (lab) — Gold standard. Cut shoes in half.
