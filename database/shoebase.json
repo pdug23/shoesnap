@@ -49,7 +49,8 @@
     "alias_code": null,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/adidas-adistar-4"
   },
   {
     "shoe_id": "shoe_0159",
@@ -101,7 +102,8 @@
     "forefoot_stack_mm": 33,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/adidas-adizero-adios-pro-3"
   },
   {
     "shoe_id": "shoe_0042",
@@ -152,7 +154,8 @@
     "forefoot_stack_mm": 33,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/adidas-adizero-adios-pro-4"
   },
   {
     "shoe_id": "shoe_0160",
@@ -204,7 +207,8 @@
     "forefoot_stack_mm": 30,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/adidas-adizero-boston-12"
   },
   {
     "shoe_id": "shoe_0035",
@@ -255,7 +259,8 @@
     "forefoot_stack_mm": 30,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/adidas-adizero-boston-13"
   },
   {
     "shoe_id": "shoe_0012",
@@ -306,7 +311,8 @@
     "forefoot_stack_mm": 31,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/adidas-adizero-evo-sl"
   },
   {
     "shoe_id": "shoe_0047",
@@ -357,7 +363,8 @@
     "forefoot_stack_mm": 43,
     "has_image": true,
     "race_distance_min": "half",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0026",
@@ -408,7 +415,8 @@
     "forefoot_stack_mm": 26,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0099",
@@ -460,7 +468,8 @@
     "forefoot_stack_mm": 24,
     "has_image": true,
     "race_distance_min": "5k",
-    "race_distance_max": "10k"
+    "race_distance_max": "10k",
+    "review_url": "https://runrepeat.com/adidas-adizero-takumi-sen-11"
   },
   {
     "shoe_id": "shoe_0122",
@@ -512,7 +521,8 @@
     "forefoot_stack_mm": 25,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/adidas-duramo-speed-2"
   },
   {
     "shoe_id": "shoe_0141",
@@ -564,7 +574,8 @@
     "forefoot_stack_mm": 38,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/adidas-hyperboost-edge"
   },
   {
     "shoe_id": "shoe_0083",
@@ -616,7 +627,8 @@
     "forefoot_stack_mm": 24,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/adidas-supernova-rise-2"
   },
   {
     "brand": "adidas",
@@ -668,7 +680,8 @@
     "alias_code": null,
     "has_image": true,
     "race_distance_min": "5k",
-    "race_distance_max": "half"
+    "race_distance_max": "half",
+    "review_url": "https://runrepeat.com/adidas-terrex-agravic-tt"
   },
   {
     "shoe_id": "shoe_0165",
@@ -720,7 +733,8 @@
     "forefoot_stack_mm": 21,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/adidas-ultraboost-22"
   },
   {
     "shoe_id": "shoe_0117",
@@ -772,7 +786,8 @@
     "forefoot_stack_mm": 20,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/adidas-ultraboost-light"
   },
   {
     "shoe_id": "shoe_0033",
@@ -823,7 +838,8 @@
     "forefoot_stack_mm": 28,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/altra-experience-flow-2"
   },
   {
     "shoe_id": "shoe_0052",
@@ -874,7 +890,8 @@
     "forefoot_stack_mm": 25,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/altra-lone-peak-9"
   },
   {
     "shoe_id": "shoe_0152",
@@ -926,7 +943,8 @@
     "forefoot_stack_mm": 30,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/altra-olympus-275"
   },
   {
     "shoe_id": "shoe_0053",
@@ -977,7 +995,8 @@
     "forefoot_stack_mm": 35,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/altra-olympus-6"
   },
   {
     "shoe_id": "shoe_0157",
@@ -1029,7 +1048,8 @@
     "forefoot_stack_mm": 28,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/altra-torin-8"
   },
   {
     "shoe_id": "shoe_0067",
@@ -1080,7 +1100,8 @@
     "forefoot_stack_mm": 23,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-gel-contend-9"
   },
   {
     "shoe_id": "shoe_0118",
@@ -1132,7 +1153,8 @@
     "forefoot_stack_mm": 30,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-gel-cumulus-26"
   },
   {
     "shoe_id": "shoe_0061",
@@ -1183,7 +1205,8 @@
     "forefoot_stack_mm": 30,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-gel-cumulus-27"
   },
   {
     "shoe_id": "shoe_0113",
@@ -1235,7 +1258,8 @@
     "forefoot_stack_mm": 30,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-gel-kayano-30"
   },
   {
     "shoe_id": "shoe_0107",
@@ -1287,7 +1311,8 @@
     "forefoot_stack_mm": 30,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-gel-kayano-31"
   },
   {
     "shoe_id": "shoe_0017",
@@ -1338,7 +1363,8 @@
     "forefoot_stack_mm": 31,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-gel-kayano-32"
   },
   {
     "shoe_id": "shoe_0166",
@@ -1390,7 +1416,8 @@
     "forefoot_stack_mm": 30,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-gel-nimbus-25"
   },
   {
     "shoe_id": "shoe_0129",
@@ -1442,7 +1469,8 @@
     "forefoot_stack_mm": 34,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-gel-nimbus-26"
   },
   {
     "shoe_id": "shoe_0013",
@@ -1493,7 +1521,8 @@
     "forefoot_stack_mm": 36,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-gel-nimbus-27"
   },
   {
     "shoe_id": "shoe_0064",
@@ -1544,7 +1573,8 @@
     "forefoot_stack_mm": 36,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-gel-nimbus-28"
   },
   {
     "shoe_id": "shoe_0147",
@@ -1596,7 +1626,8 @@
     "forefoot_stack_mm": 31,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-glideride-max-2"
   },
   {
     "shoe_id": "shoe_0075",
@@ -1648,7 +1679,8 @@
     "forefoot_stack_mm": 28,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-gt-2000-14"
   },
   {
     "shoe_id": "shoe_0130",
@@ -1700,7 +1732,8 @@
     "forefoot_stack_mm": 28,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-gt-2000-13"
   },
   {
     "shoe_id": "shoe_0091",
@@ -1752,7 +1785,8 @@
     "forefoot_stack_mm": 27,
     "has_image": true,
     "race_distance_min": "5k",
-    "race_distance_max": "half"
+    "race_distance_max": "half",
+    "review_url": "https://runrepeat.com/asics-magic-speed-5"
   },
   {
     "shoe_id": "shoe_0048",
@@ -1803,7 +1837,8 @@
     "forefoot_stack_mm": 35,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-megablast"
   },
   {
     "shoe_id": "shoe_0054",
@@ -1854,7 +1889,8 @@
     "forefoot_stack_mm": 39,
     "has_image": true,
     "race_distance_min": "half",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/asics-metafuji-trail"
   },
   {
     "shoe_id": "shoe_0046",
@@ -1905,7 +1941,8 @@
     "forefoot_stack_mm": 34,
     "has_image": true,
     "race_distance_min": "5k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/asics-metaspeed-edge-tokyo"
   },
   {
     "shoe_id": "shoe_0162",
@@ -1957,7 +1994,8 @@
     "forefoot_stack_mm": 34,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/asics-metaspeed-sky-paris"
   },
   {
     "shoe_id": "shoe_0072",
@@ -2008,7 +2046,8 @@
     "forefoot_stack_mm": 34,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/asics-metaspeed-sky-tokyo"
   },
   {
     "shoe_id": "shoe_0090",
@@ -2060,7 +2099,8 @@
     "forefoot_stack_mm": 27,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-noosa-tri-16"
   },
   {
     "shoe_id": "shoe_0106",
@@ -2112,7 +2152,8 @@
     "forefoot_stack_mm": 34,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-novablast-4"
   },
   {
     "shoe_id": "shoe_0006",
@@ -2163,7 +2204,8 @@
     "forefoot_stack_mm": 34,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-novablast-5"
   },
   {
     "shoe_id": "shoe_0093",
@@ -2215,7 +2257,8 @@
     "forefoot_stack_mm": 36,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/asics-sonicblast"
   },
   {
     "shoe_id": "shoe_0014",
@@ -2266,7 +2309,8 @@
     "forefoot_stack_mm": 37,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-superblast-2"
   },
   {
     "shoe_id": "shoe_0140",
@@ -2318,7 +2362,8 @@
     "forefoot_stack_mm": 38,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-superblast-3"
   },
   {
     "shoe_id": "shoe_0131",
@@ -2370,7 +2415,8 @@
     "forefoot_stack_mm": 38,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/asics-superblast"
   },
   {
     "shoe_id": "shoe_0114",
@@ -2422,7 +2468,8 @@
     "forefoot_stack_mm": 24,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/brooks-adrenaline-gts-23"
   },
   {
     "shoe_id": "shoe_0074",
@@ -2474,7 +2521,8 @@
     "forefoot_stack_mm": 26,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/brooks-adrenaline-gts-24"
   },
   {
     "shoe_id": "shoe_0163",
@@ -2526,7 +2574,8 @@
     "forefoot_stack_mm": 24,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/brooks-ghost-14"
   },
   {
     "shoe_id": "shoe_0135",
@@ -2578,7 +2627,8 @@
     "forefoot_stack_mm": 23,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/brooks-ghost-15"
   },
   {
     "shoe_id": "shoe_0111",
@@ -2630,7 +2680,8 @@
     "forefoot_stack_mm": 24,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/brooks-ghost-16"
   },
   {
     "shoe_id": "shoe_0032",
@@ -2681,7 +2732,8 @@
     "forefoot_stack_mm": 26,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/brooks-ghost-17"
   },
   {
     "shoe_id": "shoe_0015",
@@ -2732,7 +2784,8 @@
     "forefoot_stack_mm": 33,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/brooks-ghost-max-3"
   },
   {
     "shoe_id": "shoe_0108",
@@ -2784,7 +2837,8 @@
     "forefoot_stack_mm": 28,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/brooks-glycerin-21"
   },
   {
     "shoe_id": "shoe_0022",
@@ -2835,7 +2889,8 @@
     "forefoot_stack_mm": 28,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/brooks-glycerin-22"
   },
   {
     "shoe_id": "shoe_0155",
@@ -2887,7 +2942,8 @@
     "forefoot_stack_mm": 28,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/brooks-glycerin-gts-22"
   },
   {
     "shoe_id": "shoe_0007",
@@ -2938,7 +2994,8 @@
     "forefoot_stack_mm": 41,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/brooks-glycerin-max"
   },
   {
     "shoe_id": "shoe_0092",
@@ -2990,7 +3047,8 @@
     "forefoot_stack_mm": 26,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/brooks-hyperion-elite-5"
   },
   {
     "shoe_id": "shoe_0120",
@@ -3042,7 +3100,8 @@
     "forefoot_stack_mm": 26,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "half"
+    "race_distance_max": "half",
+    "review_url": "https://runrepeat.com/brooks-hyperion-max-2"
   },
   {
     "shoe_id": "shoe_0156",
@@ -3094,7 +3153,8 @@
     "forefoot_stack_mm": 35,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/brooks-hyperion-max-3"
   },
   {
     "shoe_id": "shoe_0149",
@@ -3146,7 +3206,8 @@
     "forefoot_stack_mm": 24,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/brooks-launch-11"
   },
   {
     "shoe_id": "shoe_0179",
@@ -3198,7 +3259,8 @@
     "forefoot_stack_mm": 34,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0116",
@@ -3250,7 +3312,8 @@
     "forefoot_stack_mm": 29,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/hoka-arahi-7"
   },
   {
     "shoe_id": "shoe_0058",
@@ -3301,7 +3364,8 @@
     "forefoot_stack_mm": 31,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/hoka-arahi-8"
   },
   {
     "shoe_id": "shoe_0169",
@@ -3353,7 +3417,8 @@
     "forefoot_stack_mm": 29,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/hoka-bondi-7"
   },
   {
     "shoe_id": "shoe_0102",
@@ -3405,7 +3470,8 @@
     "forefoot_stack_mm": 35,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/hoka-bondi-8"
   },
   {
     "shoe_id": "shoe_0001",
@@ -3456,7 +3522,8 @@
     "forefoot_stack_mm": 38,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/hoka-bondi-9"
   },
   {
     "shoe_id": "shoe_0050",
@@ -3507,7 +3574,8 @@
     "forefoot_stack_mm": 34,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/hoka-challenger-8"
   },
   {
     "shoe_id": "shoe_0078",
@@ -3559,7 +3627,8 @@
     "forefoot_stack_mm": 28,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0142",
@@ -3611,7 +3680,8 @@
     "forefoot_stack_mm": 31,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0002",
@@ -3662,7 +3732,8 @@
     "forefoot_stack_mm": 34,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/hoka-clifton-10"
   },
   {
     "shoe_id": "shoe_0137",
@@ -3714,7 +3785,8 @@
     "forefoot_stack_mm": 24,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/hoka-clifton-8"
   },
   {
     "shoe_id": "shoe_0100",
@@ -3766,7 +3838,8 @@
     "forefoot_stack_mm": 27,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/hoka-clifton-9"
   },
   {
     "shoe_id": "shoe_0101",
@@ -3818,7 +3891,8 @@
     "forefoot_stack_mm": 24,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/hoka-mach-5"
   },
   {
     "shoe_id": "shoe_0036",
@@ -3869,7 +3943,8 @@
     "forefoot_stack_mm": 32,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/hoka-mach-6"
   },
   {
     "shoe_id": "shoe_0134",
@@ -3921,7 +3996,8 @@
     "forefoot_stack_mm": 41,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/hoka-mach-x-2"
   },
   {
     "shoe_id": "shoe_0039",
@@ -3972,7 +4048,8 @@
     "forefoot_stack_mm": 33,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/hoka-mach-x-3"
   },
   {
     "shoe_id": "shoe_0126",
@@ -4024,7 +4101,8 @@
     "forefoot_stack_mm": 31,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/hoka-rocket-x-2"
   },
   {
     "shoe_id": "shoe_0127",
@@ -4076,7 +4154,8 @@
     "forefoot_stack_mm": 30,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/hoka-rocket-x-3"
   },
   {
     "shoe_id": "shoe_0094",
@@ -4128,7 +4207,8 @@
     "forefoot_stack_mm": 31,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/hoka-skyflow"
   },
   {
     "shoe_id": "shoe_0095",
@@ -4180,7 +4260,8 @@
     "forefoot_stack_mm": 37,
     "has_image": true,
     "race_distance_min": "half",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/hoka-skyward-x"
   },
   {
     "shoe_id": "shoe_0136",
@@ -4232,7 +4313,8 @@
     "forefoot_stack_mm": 29,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/hoka-speedgoat-5"
   },
   {
     "shoe_id": "shoe_0060",
@@ -4283,7 +4365,8 @@
     "forefoot_stack_mm": 27,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/hoka-speedgoat-6"
   },
   {
     "shoe_id": "shoe_0088",
@@ -4335,7 +4418,8 @@
     "forefoot_stack_mm": 31,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/hoka-tecton-x-3"
   },
   {
     "shoe_id": "shoe_0087",
@@ -4387,7 +4471,8 @@
     "forefoot_stack_mm": 22,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/hoka-torrent-3"
   },
   {
     "shoe_id": "shoe_0125",
@@ -4439,7 +4524,8 @@
     "forefoot_stack_mm": 24,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/inov-8-trailfly"
   },
   {
     "shoe_id": "shoe_0174",
@@ -4491,7 +4577,8 @@
     "forefoot_stack_mm": 35,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0173",
@@ -4543,7 +4630,8 @@
     "forefoot_stack_mm": 42,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0180",
@@ -4595,7 +4683,8 @@
     "forefoot_stack_mm": 34,
     "has_image": true,
     "race_distance_min": "5k",
-    "race_distance_max": "half"
+    "race_distance_max": "half",
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0028",
@@ -4646,7 +4735,8 @@
     "forefoot_stack_mm": 36,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/mizuno-neo-vista-2"
   },
   {
     "shoe_id": "shoe_0146",
@@ -4698,7 +4788,8 @@
     "forefoot_stack_mm": 35,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/mizuno-neo-zen-2"
   },
   {
     "shoe_id": "shoe_0027",
@@ -4749,7 +4840,8 @@
     "forefoot_stack_mm": 34,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/mizuno-neo-zen"
   },
   {
     "shoe_id": "shoe_0084",
@@ -4801,7 +4893,8 @@
     "forefoot_stack_mm": 25,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/mizuno-wave-inspire-21"
   },
   {
     "brand": "Mizuno",
@@ -4853,7 +4946,8 @@
     "alias_code": null,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/mizuno-wave-inspire-22"
   },
   {
     "shoe_id": "shoe_0096",
@@ -4905,7 +4999,8 @@
     "forefoot_stack_mm": 32,
     "has_image": true,
     "race_distance_min": "5k",
-    "race_distance_max": "half"
+    "race_distance_max": "half",
+    "review_url": "https://runrepeat.com/mizuno-wave-rebellion-flash-3"
   },
   {
     "shoe_id": "shoe_0065",
@@ -4956,7 +5051,8 @@
     "forefoot_stack_mm": 36,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/mizuno-wave-rebellion-pro-3"
   },
   {
     "shoe_id": "shoe_0097",
@@ -5008,7 +5104,8 @@
     "forefoot_stack_mm": 31,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0171",
@@ -5060,7 +5157,8 @@
     "forefoot_stack_mm": 30,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0069",
@@ -5111,7 +5209,8 @@
     "forefoot_stack_mm": 28,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/new-balance-fresh-foam-680-v8"
   },
   {
     "shoe_id": "shoe_0098",
@@ -5163,7 +5262,8 @@
     "forefoot_stack_mm": 28,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0008",
@@ -5214,7 +5314,8 @@
     "forefoot_stack_mm": 32,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/new-balance-fresh-foam-x-1080-v14"
   },
   {
     "shoe_id": "shoe_0076",
@@ -5266,7 +5367,8 @@
     "forefoot_stack_mm": 28,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/new-balance-fresh-foam-x-860-v14"
   },
   {
     "shoe_id": "shoe_0154",
@@ -5318,7 +5420,8 @@
     "forefoot_stack_mm": 35,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0051",
@@ -5369,7 +5472,8 @@
     "forefoot_stack_mm": 29,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/new-balance-fresh-foam-x-hierro-v9"
   },
   {
     "shoe_id": "shoe_0005",
@@ -5420,7 +5524,8 @@
     "forefoot_stack_mm": 40,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0110",
@@ -5472,7 +5577,8 @@
     "forefoot_stack_mm": 24,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/new-balance-fuelcell-rebel-v4"
   },
   {
     "shoe_id": "shoe_0020",
@@ -5523,7 +5629,8 @@
     "forefoot_stack_mm": 29,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0044",
@@ -5574,7 +5681,8 @@
     "forefoot_stack_mm": 32,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0104",
@@ -5626,7 +5734,8 @@
     "forefoot_stack_mm": 32,
     "has_image": true,
     "race_distance_min": "half",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0040",
@@ -5677,7 +5786,8 @@
     "forefoot_stack_mm": 32,
     "has_image": true,
     "race_distance_min": "half",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0168",
@@ -5729,7 +5839,8 @@
     "forefoot_stack_mm": 35,
     "has_image": true,
     "race_distance_min": "half",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0164",
@@ -5781,7 +5892,8 @@
     "forefoot_stack_mm": 24,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0021",
@@ -5832,7 +5944,8 @@
     "forefoot_stack_mm": 31,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0103",
@@ -5884,7 +5997,8 @@
     "forefoot_stack_mm": 23,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/nike-pegasus-40"
   },
   {
     "shoe_id": "shoe_0009",
@@ -5935,7 +6049,8 @@
     "forefoot_stack_mm": 22,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/nike-pegasus-41"
   },
   {
     "shoe_id": "shoe_0089",
@@ -5987,7 +6102,8 @@
     "forefoot_stack_mm": 24,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/nike-pegasus-plus"
   },
   {
     "shoe_id": "shoe_0011",
@@ -6038,7 +6154,8 @@
     "forefoot_stack_mm": 35,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/nike-pegasus-premium"
   },
   {
     "shoe_id": "shoe_0070",
@@ -6089,7 +6206,8 @@
     "forefoot_stack_mm": 28,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/nike-pegasus-trail-5"
   },
   {
     "shoe_id": "shoe_0068",
@@ -6140,7 +6258,8 @@
     "forefoot_stack_mm": 23,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/nike-revolution-8"
   },
   {
     "shoe_id": "shoe_0045",
@@ -6191,7 +6310,8 @@
     "forefoot_stack_mm": 23,
     "has_image": true,
     "race_distance_min": "5k",
-    "race_distance_max": "10k"
+    "race_distance_max": "10k",
+    "review_url": "https://runrepeat.com/nike-streakfly-2"
   },
   {
     "shoe_id": "shoe_0073",
@@ -6243,7 +6363,8 @@
     "forefoot_stack_mm": 26,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/nike-structure-26"
   },
   {
     "shoe_id": "shoe_0145",
@@ -6295,7 +6416,8 @@
     "forefoot_stack_mm": 30,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/nike-structure-plus"
   },
   {
     "shoe_id": "shoe_0062",
@@ -6346,7 +6468,8 @@
     "forefoot_stack_mm": 26,
     "has_image": true,
     "race_distance_min": "5k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0158",
@@ -6398,7 +6521,8 @@
     "forefoot_stack_mm": 31,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0112",
@@ -6450,7 +6574,8 @@
     "forefoot_stack_mm": 32,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0139",
@@ -6502,7 +6627,8 @@
     "forefoot_stack_mm": 29,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/nike-vomero-17"
   },
   {
     "shoe_id": "shoe_0010",
@@ -6553,7 +6679,8 @@
     "forefoot_stack_mm": 35,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/nike-vomero-18"
   },
   {
     "shoe_id": "shoe_0003",
@@ -6604,7 +6731,8 @@
     "forefoot_stack_mm": 35,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/nike-vomero-plus"
   },
   {
     "shoe_id": "shoe_0004",
@@ -6655,7 +6783,8 @@
     "forefoot_stack_mm": 45,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/nike-vomero-premium"
   },
   {
     "shoe_id": "shoe_0105",
@@ -6707,7 +6836,8 @@
     "forefoot_stack_mm": 33,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/nike-zoom-fly-5"
   },
   {
     "shoe_id": "shoe_0041",
@@ -6758,7 +6888,8 @@
     "forefoot_stack_mm": 32,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/nike-zoom-fly-6"
   },
   {
     "shoe_id": "shoe_0081",
@@ -6810,7 +6941,8 @@
     "forefoot_stack_mm": 35,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/on-cloudboom-strike"
   },
   {
     "shoe_id": "shoe_0079",
@@ -6862,7 +6994,8 @@
     "forefoot_stack_mm": 29,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "half"
+    "race_distance_max": "half",
+    "review_url": "https://runrepeat.com/on-cloudflow-5"
   },
   {
     "shoe_id": "shoe_0018",
@@ -6913,7 +7046,8 @@
     "forefoot_stack_mm": 29,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/on-cloudmonster-2"
   },
   {
     "brand": "On",
@@ -6966,7 +7100,8 @@
     "alias_code": null,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/on-cloudmonster-3"
   },
   {
     "shoe_id": "shoe_0019",
@@ -7017,7 +7152,8 @@
     "forefoot_stack_mm": 24,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/on-cloudmonster"
   },
   {
     "shoe_id": "shoe_0172",
@@ -7069,7 +7205,8 @@
     "forefoot_stack_mm": 31.0,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/on-cloudmonster-3-hyper"
   },
   {
     "shoe_id": "shoe_0082",
@@ -7121,7 +7258,8 @@
     "forefoot_stack_mm": 25,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/on-cloudrunner-2"
   },
   {
     "shoe_id": "shoe_0077",
@@ -7173,7 +7311,8 @@
     "forefoot_stack_mm": 27,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/on-cloudsurfer-2"
   },
   {
     "shoe_id": "shoe_0080",
@@ -7225,7 +7364,8 @@
     "forefoot_stack_mm": 29,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/on-cloudsurfer-max"
   },
   {
     "shoe_id": "shoe_0177",
@@ -7277,7 +7417,8 @@
     "forefoot_stack_mm": 30,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0034",
@@ -7328,7 +7469,8 @@
     "forefoot_stack_mm": 32,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/puma-deviate-nitro-elite-3"
   },
   {
     "shoe_id": "shoe_0178",
@@ -7380,7 +7522,8 @@
     "forefoot_stack_mm": 32,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0049",
@@ -7431,7 +7574,8 @@
     "forefoot_stack_mm": 32,
     "has_image": true,
     "race_distance_min": "half",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/puma-fast-r-nitro-elite-2"
   },
   {
     "shoe_id": "shoe_0066",
@@ -7482,7 +7626,8 @@
     "forefoot_stack_mm": 32,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/puma-fast-r-nitro-elite-3"
   },
   {
     "shoe_id": "shoe_0123",
@@ -7534,7 +7679,8 @@
     "forefoot_stack_mm": 26,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0143",
@@ -7586,7 +7732,8 @@
     "forefoot_stack_mm": 35,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0025",
@@ -7637,7 +7784,8 @@
     "forefoot_stack_mm": 39,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/puma-magmax-nitro"
   },
   {
     "shoe_id": "shoe_0029",
@@ -7688,7 +7836,8 @@
     "forefoot_stack_mm": 30,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/puma-magnify-nitro-3"
   },
   {
     "shoe_id": "shoe_0121",
@@ -7740,7 +7889,8 @@
     "forefoot_stack_mm": 26,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/puma-velocity-nitro-3"
   },
   {
     "shoe_id": "shoe_0024",
@@ -7791,7 +7941,8 @@
     "forefoot_stack_mm": 26,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/puma-velocity-nitro-4"
   },
   {
     "shoe_id": "shoe_0148",
@@ -7843,7 +7994,8 @@
     "forefoot_stack_mm": 34,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0030",
@@ -7894,7 +8046,8 @@
     "forefoot_stack_mm": 31,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/salomon-aero-glide-2"
   },
   {
     "shoe_id": "shoe_0063",
@@ -7945,7 +8098,8 @@
     "forefoot_stack_mm": 32,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/salomon-aero-glide-3"
   },
   {
     "shoe_id": "shoe_0176",
@@ -7997,7 +8151,8 @@
     "forefoot_stack_mm": 33,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0170",
@@ -8049,7 +8204,8 @@
     "forefoot_stack_mm": 25,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/salomon-speedcross-5"
   },
   {
     "shoe_id": "shoe_0059",
@@ -8100,7 +8256,8 @@
     "forefoot_stack_mm": 22,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/salomon-speedcross-6"
   },
   {
     "shoe_id": "shoe_0128",
@@ -8152,7 +8309,8 @@
     "forefoot_stack_mm": 23,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/salomon-ultra-glide-2"
   },
   {
     "shoe_id": "shoe_0144",
@@ -8204,7 +8362,8 @@
     "forefoot_stack_mm": 33,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/saucony-endorphin-azura"
   },
   {
     "shoe_id": "shoe_0038",
@@ -8255,7 +8414,8 @@
     "forefoot_stack_mm": 32,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/saucony-endorphin-elite-2"
   },
   {
     "shoe_id": "shoe_0161",
@@ -8307,7 +8467,8 @@
     "forefoot_stack_mm": 32,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/saucony-endorphin-pro-3"
   },
   {
     "shoe_id": "shoe_0043",
@@ -8358,7 +8519,8 @@
     "forefoot_stack_mm": 32,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/saucony-endorphin-pro-4"
   },
   {
     "brand": "Saucony",
@@ -8410,7 +8572,8 @@
     "alias_code": null,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/saucony-endorphin-pro-5"
   },
   {
     "shoe_id": "shoe_0132",
@@ -8462,7 +8625,8 @@
     "forefoot_stack_mm": 28,
     "has_image": true,
     "race_distance_min": "5k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/saucony-endorphin-speed-3"
   },
   {
     "shoe_id": "shoe_0109",
@@ -8514,7 +8678,8 @@
     "forefoot_stack_mm": 30,
     "has_image": true,
     "race_distance_min": "5k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/saucony-endorphin-speed-4"
   },
   {
     "shoe_id": "shoe_0037",
@@ -8565,7 +8730,8 @@
     "forefoot_stack_mm": 28,
     "has_image": true,
     "race_distance_min": "5k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/saucony-endorphin-speed-5"
   },
   {
     "shoe_id": "shoe_0133",
@@ -8617,7 +8783,8 @@
     "forefoot_stack_mm": 29,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/saucony-guide-17"
   },
   {
     "shoe_id": "shoe_0057",
@@ -8668,7 +8835,8 @@
     "forefoot_stack_mm": 29,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/saucony-guide-18"
   },
   {
     "shoe_id": "shoe_0085",
@@ -8720,7 +8888,8 @@
     "forefoot_stack_mm": 24,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/saucony-kinvara-16"
   },
   {
     "shoe_id": "shoe_0071",
@@ -8771,7 +8940,8 @@
     "forefoot_stack_mm": 24,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/saucony-peregrine-15"
   },
   {
     "shoe_id": "shoe_0119",
@@ -8823,7 +8993,8 @@
     "forefoot_stack_mm": 27,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/saucony-ride-17"
   },
   {
     "shoe_id": "shoe_0023",
@@ -8874,7 +9045,8 @@
     "forefoot_stack_mm": 27,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/saucony-ride-18"
   },
   {
     "shoe_id": "shoe_0150",
@@ -8926,7 +9098,8 @@
     "forefoot_stack_mm": 30,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/saucony-ride-19"
   },
   {
     "shoe_id": "shoe_0167",
@@ -8978,7 +9151,8 @@
     "forefoot_stack_mm": 27,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/saucony-tempus-2"
   },
   {
     "shoe_id": "shoe_0138",
@@ -9030,7 +9204,8 @@
     "forefoot_stack_mm": 29,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/saucony-triumph-21"
   },
   {
     "shoe_id": "shoe_0115",
@@ -9082,7 +9257,8 @@
     "forefoot_stack_mm": 27,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/saucony-triumph-22"
   },
   {
     "shoe_id": "shoe_0056",
@@ -9133,7 +9309,8 @@
     "forefoot_stack_mm": 27,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/saucony-triumph-23"
   },
   {
     "shoe_id": "shoe_0086",
@@ -9185,7 +9362,8 @@
     "forefoot_stack_mm": 31,
     "has_image": true,
     "race_distance_min": "half",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/saucony-xodus-ultra-4"
   },
   {
     "shoe_id": "shoe_0016",
@@ -9236,7 +9414,8 @@
     "forefoot_stack_mm": 36,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/skechers-aero-burst"
   },
   {
     "shoe_id": "shoe_0151",
@@ -9288,7 +9467,8 @@
     "forefoot_stack_mm": 27,
     "has_image": true,
     "race_distance_min": "10k",
-    "race_distance_max": "marathon"
+    "race_distance_max": "marathon",
+    "review_url": "https://runrepeat.com/skechers-aero-tempo"
   },
   {
     "shoe_id": "shoe_0055",
@@ -9339,7 +9519,8 @@
     "forefoot_stack_mm": 24,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/the-north-face-vectiv-enduris-3"
   },
   {
     "shoe_id": "shoe_0175",
@@ -9391,7 +9572,8 @@
     "forefoot_stack_mm": 35,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0031",
@@ -9442,7 +9624,8 @@
     "forefoot_stack_mm": 33,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/topo-athletic-atmos"
   },
   {
     "shoe_id": "shoe_0153",
@@ -9494,7 +9677,8 @@
     "forefoot_stack_mm": 28,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": null
   },
   {
     "shoe_id": "shoe_0124",
@@ -9546,6 +9730,7 @@
     "forefoot_stack_mm": 21,
     "has_image": true,
     "race_distance_min": null,
-    "race_distance_max": null
+    "race_distance_max": null,
+    "review_url": "https://runrepeat.com/under-armour-charged-pursuit-3"
   }
 ]
